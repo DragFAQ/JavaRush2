@@ -1,4 +1,17 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big04">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big05">
+<h3>Змейка(5)</h3>
+<p>Теперь доделаем <span class="text-corporate">enum</span> <strong><span class="text-corporate">SnakeDirection</span></strong> так, чтобы он содержал возможные направления движения змейки.</p>
+<p>Добавь <span class="text-user"><strong>4</strong></span> значения <strong><span class="text-user">UP</span></strong>, <span class="text-user"><strong>DOWN</strong></span>, <span class="text-user"><strong>LEFT</strong></span>, <span class="text-user"><strong>RIGHT</strong></span>.</p>
+<p><strong>Должно получиться примерно так:</strong><br />
+<code>public enum SnakeDirection</code><br />
+<code>{<br />
+ UP,<br />
+ RIGHT,<br />
+ DOWN,<br />
+ LEFT<br />
+}</code></p>
+
+<hr>
 <h3>Змейка(4)</h3>
 <p>Координаты <mark class="user">x</mark> и <mark class="user">y</mark> ты уже создал в классе <span class="text-corporate"><strong>Mouse</strong></span>, а как получить к ним доступ?<br />
 Создай корректные геттеры для этих полей и конструктор с двумя параметрами типа <span class="text-corporate">int</span> (<mark class="user">x</mark> <em>и</em> <mark class="user">y</mark> <em>соответственно</em>).</p>
