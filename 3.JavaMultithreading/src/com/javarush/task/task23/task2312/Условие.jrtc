@@ -1,4 +1,13 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big05">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big06">
+<h3>Змейка(6)</h3>
+<p>Теперь займемся классом <strong><span class="text-corporate">SnakeSection</span></strong>.<br />
+Он будет описывать один кусочек змеи.</p>
+<p>А у каждого кусочка что есть?<br />
+Правильно! <strong>Координаты</strong>.</p>
+<p>Добавь два поля в класс <span class="text-corporate"><strong>SnakeSection</strong></span>: <mark class="user">x</mark> и <mark class="user">y</mark> типа <span class="text-corporate">int</span>.<br />
+Добавь для них <span class="text-corporate"><strong>getter&#8217;ы</strong></span> и конструктор с двумя параметрами типа <span class="text-corporate">int</span>.</p>
+
+<hr>
 <h3>Змейка(5)</h3>
 <p>Теперь доделаем <span class="text-corporate">enum</span> <strong><span class="text-corporate">SnakeDirection</span></strong> так, чтобы он содержал возможные направления движения змейки.</p>
 <p>Добавь <span class="text-user"><strong>4</strong></span> значения <strong><span class="text-user">UP</span></strong>, <span class="text-user"><strong>DOWN</strong></span>, <span class="text-user"><strong>LEFT</strong></span>, <span class="text-user"><strong>RIGHT</strong></span>.</p>
