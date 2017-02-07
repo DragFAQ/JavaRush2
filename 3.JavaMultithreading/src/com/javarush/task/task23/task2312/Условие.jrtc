@@ -1,4 +1,12 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big02">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big03">
+<h3>Змейка(3)</h3>
+<p>Отлично. Я еще добавил класс <span class="text-corporate"><strong>KeyboardObserver</strong></span> на будущее.<br />
+Изучи его внимательно. Пригодится.</p>
+<p>Начнем с самого простого &#8212; класса <span class="text-corporate"><strong>Mouse</strong></span>.<br />
+Мышь не будет двигаться и у нее будут только координаты и все.<br />
+Добавь два приватных поля в класс <span class="text-corporate"><strong>Mouse</strong></span>: <mark class="user">x</mark> и <mark class="user">y</mark> типа <span class="text-corporate">int</span>.</p>
+
+<hr>
 <h3>Змейка(2)</h3>
 <p>Теперь самое интересное &#8212; как будет устроена змея.</p>
 <p><strong>Что можно сказать о змее:</strong><br />
