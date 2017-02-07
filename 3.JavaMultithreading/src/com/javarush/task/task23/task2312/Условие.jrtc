@@ -1,4 +1,18 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big08">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big09">
+<h3>Змейка(9)</h3>
+<p>Еще остался самый главный класс &#8212; <span class="text-corporate"><strong>Room</strong></span>.<br />
+Что нам нужно для его описания?<br />
+Размеры комнаты (<mark class="user">width</mark> и <mark class="user"><strong>height</strong></mark>) &#8212; раз.<br />
+<strong>Змея</strong> &#8212; <strong>два</strong><br />
+<strong>Мышь</strong> &#8212; <strong>три</strong>.</p>
+<p><strong>Надо:</strong><br />
+а) создать в классе <span class="text-corporate"><strong>Room</strong></span> переменные <mark class="user">width</mark> и <mark class="user">height</mark> типа <span class="text-corporate">int</span>.<br />
+б) создать в классе <span class="text-corporate"><strong>Room</strong></span> переменную <mark class="user">snake</mark> типа <strong><span class="text-corporate">Snake</span></strong>.<br />
+в) создать в классе <span class="text-corporate"><strong>Room</strong></span> переменную <mark class="user">mouse</mark> типа <span class="text-corporate"><strong>Snake</strong></span>. Шучу. Типа <strong><span class="text-corporate">Mouse</span></strong>, конечно же :).<br />
+г) создать для них всех <strong>геттеры</strong> и <strong>сеттеры</strong>.<br />
+д) создать конструктор. Конструктор должен принимать три параметра: <mark class="user">width</mark>, <mark class="user">height</mark> и &#8230; <mark class="user">snake</mark>!</p>
+
+<hr>
 <h3>Змейка(8)</h3>
 <p>Настала очередь конструктора класса <span class="text-corporate"><strong>Snake</strong></span>.</p>
 <p>Змея у нас будет поначалу состоять из одного кусочка &#8212; головы.<br />
