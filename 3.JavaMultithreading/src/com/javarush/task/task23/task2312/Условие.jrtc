@@ -1,4 +1,9 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big03">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big04">
+<h3>Змейка(4)</h3>
+<p>Координаты <mark class="user">x</mark> и <mark class="user">y</mark> ты уже создал в классе <span class="text-corporate"><strong>Mouse</strong></span>, а как получить к ним доступ?<br />
+Создай корректные геттеры для этих полей и конструктор с двумя параметрами типа <span class="text-corporate">int</span> (<mark class="user">x</mark> <em>и</em> <mark class="user">y</mark> <em>соответственно</em>).</p>
+
+<hr>
 <h3>Змейка(3)</h3>
 <p>Отлично. Я еще добавил класс <span class="text-corporate"><strong>KeyboardObserver</strong></span> на будущее.<br />
 Изучи его внимательно. Пригодится.</p>
