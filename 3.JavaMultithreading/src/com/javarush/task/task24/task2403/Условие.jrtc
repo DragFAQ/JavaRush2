@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2403">
+<h3>Так-с... сопоставим</h3>
+<p><strong> Исправь ошибки:</strong> перемести методы <mark>clone</mark> в те классы, в которых они должны быть реализованы.<br />
+Лишние методы удали.<br />
+Не удаляй метод <mark>main</mark>.</p>
+
+</div>
