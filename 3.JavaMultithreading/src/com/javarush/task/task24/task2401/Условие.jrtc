@@ -1,0 +1,9 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2401">
+<h3>Создание своего интерфейса-маркера</h3>
+<p>1. Создай интерфейс-маркер <strong><span class="text-yellow">SelfInterfaceMarker</span></strong>.<br />
+2. Создай класс <strong><span class="text-corporate">SelfInterfaceMarkerImpl</span></strong>, который реализует <span class="text-yellow"><strong>SelfInterfaceMarker</strong></span>.<br />
+3. Добавь в <strong><span class="text-corporate">SelfInterfaceMarkerImpl</span></strong> минимум <strong><span class="text-user">2</span></strong> любых <mark>public</mark> метода.<br />
+4. Создай исключение <strong><span class="text-yellow">UnsupportedInterfaceMarkerException</span></strong>, унаследуй его от класса <strong><span class="text-corporate">Exception</span></strong>.<br />
+5. В методе <mark>testClass</mark> класса <strong><span class="text-corporate">Util</span></strong>: <strong>если параметр</strong> <strong>==</strong> <strong><span class="text-neon">null</span></strong>, то выбросьте <strong><span class="text-yellow">UnsupportedInterfaceMarkerException</span></strong>.</p>
+
+</div>
