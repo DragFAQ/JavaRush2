@@ -132,5 +132,14 @@ public class Room {
      * Программа делает паузу, длинна которой зависит от длинны змеи.
      */
     public void sleep() {
+        int sleepTime = 520 - 20 * snake.getSections().size();
+        if (sleepTime < 200)
+            sleepTime = 200;
+
+        try {
+            Thread.sleep(sleepTime);
+        } catch (InterruptedException e) {
+
+        }
     }
 }
