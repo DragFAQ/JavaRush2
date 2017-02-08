@@ -1,0 +1,8 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2405">
+<h3>Black box</h3>
+<p>1. Восстанови логику метода <mark>someAction</mark> для поля <mark class="user">solutionAction</mark>.<br />
+2. Пример вывода смотри в комментарии к методу <mark>main</mark>.<br />
+3. <strong>Подсказка:</strong> <em>метод</em> <mark>someAction</mark> <em>анонимного класса поля</em> <mark class="user">solutionAction</mark> <em>должен вызвать метод сабкласса</em> <strong><span class="text-corporate">FirstClass</span></strong>, если <mark class="user">param</mark> <strong>&gt;<span class="text-user"> 0</span></strong>, иначе вызвать метод сабкласса <strong><span class="text-corporate">SecondClass</span></strong>.</p>
+<p>Не изменяй метод <mark>main</mark>!</p>
+
+</div>
