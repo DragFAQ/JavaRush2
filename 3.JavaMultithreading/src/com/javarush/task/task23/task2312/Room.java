@@ -98,6 +98,32 @@ public class Room {
         //Рисуем все кусочки змеи
         //Рисуем мышь
         //Выводим все это на экран
+        int[][] matrix = new int[height][width];
+
+        for (SnakeSection s : snake.getSections())
+            matrix[s.getY()][s.getX()] = 1;
+        matrix[snake.getY()][snake.getX()] = 2;
+        matrix[mouse.getY()][mouse.getX()] = 3;
+
+        for (int y = 0; y < matrix.length; y++) {
+            String line = "";
+            for (int x = 0; x < matrix[0].length; x++) {
+                switch (matrix[y][x]) {
+                    case 1:
+                        line += "x";
+                        break;
+                    case 2:
+                        line += "X";
+                        break;
+                    case 3:
+                        line += "^";
+                        break;
+                    default:
+                        line += ".";
+                }
+            }
+            System.out.println(line);
+        }
     }
 
     /**
