@@ -1,4 +1,19 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big14">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big15">
+<h3>Змейка(15)</h3>
+<p>Теперь осталось допилить змею.</p>
+<p><strong>Вот что я предлагаю насчет движения змеи:</strong><br />
+Змея состоит из кусочков. Давай каждый ход просто добавлять один кусочек со стороны головы,<br />
+а самый последний &#8212; удалять. Тогда получится, что <strong>змея ползет</strong>.</p>
+<p>Давай добавим два метода move, один без параметров, а другой с двумя параметрами типа <span class="text-corporate">int</span>.</p>
+<p><strong>В методе</strong> <mark>move</mark> <strong>без параметров необходимо:</strong><br />
+а) прекратить движение если змея умерла(<mark class="user">isAlive</mark> <em>==</em> <span class="text-neon"><strong>false</strong></span>)<br />
+б) вызвать метод <mark>move(<strong>0</strong>, <strong>-1</strong>)</mark> если направление движения равно <mark class="green">SnakeDirection</mark>.<mark class="user">UP</mark><br />
+в) вызвать метод <mark>move(<strong>1</strong>, <strong>0</strong>)</mark> если направление движения равно <mark class="green">SnakeDirection</mark>.<mark class="user">RIGHT</mark><br />
+г) вызвать метод <mark>move(<strong>0</strong>, <strong>1</strong>)</mark> если направление движения равно <mark class="green">SnakeDirection</mark>.<mark class="user">DOWN</mark><br />
+д) вызвать метод <mark>move(<strong>-1</strong>, <strong>0</strong>)</mark> если направление движения равно <mark class="green">SnakeDirection</mark>.<mark class="user">LEFT</mark></p>
+<p>Метод move с параметрами <span class="text-corporate">int</span>, <span class="text-corporate">int</span> пока оставим пустым.</p>
+
+<hr>
 <h3>Змейка(14)</h3>
 <p>Теперь поработаем над методом <mark>print()</mark>.</p>
 <p><strong>Надо:</strong><br />
