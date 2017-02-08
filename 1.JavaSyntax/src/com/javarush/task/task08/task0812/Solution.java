@@ -29,6 +29,7 @@ public class Solution {
                 lastNum = num;
             }
         }
+        maxSeq = curSeq > maxSeq ? curSeq : maxSeq;
 
         System.out.println(maxSeq);
     }
