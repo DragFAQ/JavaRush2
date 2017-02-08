@@ -1,4 +1,10 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big12">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big13">
+<h3>Змейка(13)</h3>
+<p>Предлагаю тебе в этот раз написать специальный метод <mark>sleep()</mark>, который будет делать паузу в зависимости от длины змеи (<em>количества элементов в</em> <strong><span class="text-corporate">sections</span></strong>).<br />
+Придумай какой-нибудь хитрый алгоритм. Чтобы на первом уровне пауза была <span class="text-user"><strong>500</strong></span> <strong>миллисекунд</strong>,<br />
+а к <strong><span class="text-user">10</span></strong> <strong>уровню</strong> постепенно уменьшилась до <span class="text-user"><strong>300</strong></span>. А к <strong><span class="text-user">15</span></strong> до <span class="text-user"><strong>200</strong></span>. И дальше оставалась постоянной.</p>
+
+<hr>
 <h3>Змейка(12)</h3>
 <p>Змея у нас есть, пусть и мышь будет.</p>
 <p><strong>Добавить в метод main:</strong><br />
