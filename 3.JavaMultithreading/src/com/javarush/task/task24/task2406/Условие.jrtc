@@ -1,0 +1,6 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2406">
+<h3>Наследование от внутреннего класса</h3>
+<p>Внутри класса <strong><span class="text-corporate">Solution</span></strong> создай <span class="text-user"><strong>2</strong></span> внутренних <mark>public</mark> класса <span class="text-corporate"><strong>Apt3Bedroom</strong></span>, <span class="text-corporate"><strong>BigHall</strong></span>.<br />
+Унаследуй их от <strong><span class="text-corporate">Apartments</span></strong> и <strong><span class="text-corporate">Hall</span></strong>.</p>
+
+</div>

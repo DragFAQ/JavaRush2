@@ -1,0 +1,10 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2404">
+<h3>Рефакторинг Rectangle</h3>
+<p><strong>В классе Rectangle:</strong><br />
+1. Измени методы <mark>getHeight</mark> и <mark>getWidth</mark>, чтобы они возвращали объекты типов <span class="text-green">HasHeight</span> и <span class="text-green">HasWidth</span> соответственно.<br />
+2. Для этого внутри методов <mark>getHeight</mark> и <mark>getWidth</mark> создай локальные <strong>классы</strong> &#8212; реализации <strong>интерфейсов</strong>.<br />
+3. Переименуй <mark>getHeight</mark> в <mark>castToHasHeight</mark>, <mark>getWidth</mark> в <mark>castToHasWidth</mark> (<em>на имени метода нажми</em> <span class="text-neon">Shift+F6</span>).<br />
+4. Убери наследование интерфейсов в классе <strong><span class="text-corporate">Rectangle</span></strong>.</p>
+<p><strong>P.S.</strong> <em>Ожидается, что после внесения требуемых изменений, закомментированный код в методе станет рабочим и должен быть раскомментирован.</em></p>
+
+</div>
