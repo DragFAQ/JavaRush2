@@ -7,6 +7,8 @@ public class Room {
         Snake snake = new Snake(20, 10);
         game = new Room(40, 20, snake);
         snake.setDirection(SnakeDirection.DOWN);
+        game.createMouse();
+        game.run();
     }
 
     private int width;
@@ -52,14 +54,18 @@ public class Room {
         this.snake = snake;
     }
 
-    void run() {}
+    public void run() {}
     void print() {}
 
-    void createMouse() {
+    public void createMouse() {
         mouse = new Mouse((int) (Math.random() * width), (int) (Math.random() * height));
     }
 
     void eatMouse() {
         createMouse();
+    }
+
+    void sleep () {
+
     }
 }
