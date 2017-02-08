@@ -1,8 +1,12 @@
 package com.javarush.task.task23.task2312;
 
 public class Room {
-    public static void main(String[] args) {
+    public static Room game;
 
+    public static void main(String[] args) {
+        Snake snake = new Snake(20, 10);
+        game = new Room(40, 20, snake);
+        snake.setDirection(SnakeDirection.DOWN);
     }
 
     private int width;
@@ -47,4 +51,7 @@ public class Room {
         this.height = height;
         this.snake = snake;
     }
+
+    void run() {}
+    void print() {}
 }
