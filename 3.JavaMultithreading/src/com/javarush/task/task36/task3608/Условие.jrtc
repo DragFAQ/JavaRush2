@@ -1,4 +1,17 @@
-<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big03">
+<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big04">
+<h3>MVC (4)</h3>
+<p>Пора заменять нашу фейковую Модель на реальную, которая будет получать данные из <strong><span class="text-corporate">DataSource</span></strong>.<br />
+В пакет <strong><span class="text-red">model.service</span></strong> я добавил сервис для работы с пользователями.<br />
+Также в корне этой задачи ты найдешь утильный класс <span class="text-corporate"><strong>Util</strong></span>.</p>
+<p>1. Аналогично <strong><span class="text-yellow">FakeModel</span></strong> создай модель <span class="text-yellow"><strong>MainModel</strong></span>.</p>
+<p>2. Т.к. Модель обращается к сервисам, то в <strong><span class="text-yellow">MainModel</span></strong> создай поле <mark class="user">UserService</mark> <span class="text-corporate">userService</span>, инициализируй объектом.</p>
+<p>3. Реализуй логику метода <mark>loadUsers</mark>:<br />
+3.1. Достань всех пользователей между <span class="text-user"><strong>1</strong></span> и <span class="text-user"><strong>100</strong></span> уровнями. (Метод <mark>getUsersBetweenLevels(1, 100)</mark>).<br />
+3.2. Положи всех пользователей в <strong><span class="text-yellow">modelData</span></strong>.</p>
+<p>4. Обнови <strong>Solution.main</strong>: замени <strong><span class="text-yellow">FakeModel</span></strong> на <span class="text-yellow"><strong>MainModel</strong></span>.<br />
+Преимущества <strong>MVC</strong> в том, что в любой момент времени легко можно заменить любую часть паттерна.</p>
+
+<hr>
 <h3>MVC (3)</h3>
 <p>Чтобы понимать, в правильном ли направлении ты движешься, тебе надо видеть данные. Поэтому:</p>
 <p>1. В пакете view создай класс UsersView, реализующий View. Он будет отображать список пользователей в консоль.</p>
