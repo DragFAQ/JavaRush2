@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2410">
+<h3>Рефакторинг, анонимные классы</h3>
+<p>Сделайте так, чтобы метод <mark>getIterator</mark> возвращал анонимный класс.<br />
+Перенесите логику <strong><span class="text-corporate">LocalIterator</span></strong> в анонимный класс.<br />
+Меняйте только тело метода <mark>getIterator</mark>.</p>
+
+</div>
