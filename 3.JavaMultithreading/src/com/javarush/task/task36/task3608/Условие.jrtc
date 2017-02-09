@@ -1,4 +1,13 @@
-<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big01">
+<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big02">
+<h3>MVC (2)</h3>
+<p>1. Создай пакет <strong><span class="text-red">controller</span></strong>, в котором создай класс <span class="text-corporate"><strong>Controller</strong></span>.<br />
+Этот класс будет получать запрос от клиента, оповещать Модель об этом, а Модель, в свою очередь, будет обновлять <strong><span class="text-red">ModelData</span></strong>.</p>
+<p>2. Добавь в контроллер поле <mark class="user">Model</mark> <span class="text-corporate">model</span> вместе с сеттером.</p>
+<p>3. В контроллере создай публичный метод <mark>void onShowAllUsers()</mark>, который должен обратиться к модели и инициировать загрузку пользователей.</p>
+<p>4. Создай пакет <strong><span class="text-red">view</span></strong>. В нем создай интерфейс <strong><span class="text-yellow">View</span></strong>.</p>
+<p>5. В интерфейс <span class="text-yellow"><strong>View</strong></span> добавь два метода: <mark>void refresh(ModelData modelData)</mark> и <mark>void setController(Controller controller)</mark></p>
+
+<hr>
 <h3>MVC (1)</h3>
 <p>Привет! Эта задача будет на паттерн <strong>MVC</strong> &#8212; <strong>Model-View-Controller</strong>.<br />
 Мы вместе построим архитектуру используя <strong>MVC</strong>. Разберись подробно, что и почему нужно реализовывать так, как я тебе покажу.<br />
