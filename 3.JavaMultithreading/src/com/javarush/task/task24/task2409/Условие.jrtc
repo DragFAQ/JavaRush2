@@ -1,0 +1,13 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2409">
+<h3>Интернет-магазин продажи джинсов</h3>
+<p>1. Создай <strong><span class="text-user">2</span></strong> интерфейса в отдельных файлах:<br />
+1.1) Item с методами <mark>int getId()</mark>, <mark>double getPrice()</mark>, <mark>String getTM()</mark><br />
+1.2) <strong><span class="text-corporate">Jeans extends Item</span></strong> с методами <mark>int getLength()</mark> и <mark>int getSize()</mark></p>
+<p>2. В классе <span class="text-corporate"><strong>Util</strong></span> в методе <mark>getAllJeans</mark> добавь пропущенную часть <strong>java-кода:</strong><br />
+2.1) разберись в том, что уже есть в методе <mark>getAllJeans</mark> класса <strong><span class="text-corporate">Util</span></strong><br />
+2.2) создай абстрактный <strong><span class="text-corporate">class AbstractJeans</span></strong> от интерфейса <strong><span class="text-yellow">Jeans</span></strong> с одним абстрактным методом, реализуй остальные методы<br />
+2.3) создай классы <strong><span class="text-corporate">Levis</span></strong> и <strong><span class="text-corporate">Denim</span></strong> от <strong><span class="text-corporate">AbstractJeans</span></strong>, реализуй оставшийся метод<br />
+2.4) в классе <strong><span class="text-corporate">AbstractJeans</span></strong> реализуй метод <mark>toString()</mark> (<em>можешь воспользоваться</em> <span class="text-neon">Alt+Insert -&gt; toString()</span>)<br />
+2.5) метод <mark>toString</mark> класса <strong><span class="text-corporate">AbstractJeans</span></strong> должен начинаться с имени сабкласса, например, <span class="text-neon">Levis{id=1, length=34, size=6, price=150.0}</span></p>
+
+</div>
