@@ -1,4 +1,23 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big09">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big10">
+<h3>Арканоид(10)</h3>
+<p>Что мы будем делать с <span class="text-corporate"><strong>Canvas</strong></span>?<br />
+Мы будем рисовать на нем (<em>в его матрице</em>).<br />
+Поэтому нам понадобятся два метода<br />
+<mark>void setPoint(double <strong>x</strong>, double <strong>y</strong>, char <strong>c</strong>)</mark><br />
+<mark>void drawMatrix(double <strong>x</strong>, double <strong>y</strong>, int[][] <strong>matrix</strong>, char <strong>c</strong>)</mark></p>
+<p>Первый метод &#8212; <mark>setPoint</mark> будет &#171;<strong><em>ставить точку в координатах</em></strong> <mark class="user">x</mark><strong>,</strong><mark class="user">y</mark><strong><em> цветом </em></strong><mark class="user">c</mark>&#171;.</p>
+<p><strong>В методе надо:</strong><br />
+а) округлить <mark class="user">x</mark> и <mark class="user">y</mark> до целых чисел<br />
+б) занести в <mark class="user">matrix[y][x]</mark> значение с<br />
+в) ничего не делать, если <mark class="user">x</mark> &lt; <span class="text-user"><strong>0</strong></span> или <mark class="user">y</mark> &lt; <strong><span class="text-user">0</span></strong> или <mark class="user">y</mark> &gt; <strong><span class="text-user">matrix.length</span></strong> или <mark class="user">x</mark> &gt; <strong><span class="text-user">matrix[0].length</span></strong></p>
+<p>Второй метод &#8212; <mark>drawMatrix</mark> копирует переданную ему картинку (<em><strong>матрицу</strong></em>) в матрицу <span class="text-corporate"><strong>Canvas</strong></span>.<br />
+И не просто копирует, а начиная с координат <mark class="user">x</mark>, <mark class="user">y</mark></p>
+<p><strong>В методе надо:</strong><br />
+а) с помощью двух вложенных циклов пройтись по всем ячейкам переданной картинки<br />
+б) если значение ячейки элемента <strong>[i][j]</strong> полученной матрицы не равно<span class="text-user"><strong> 0</strong></span>, то покрасить в матрице объекта <span class="text-corporate"><strong>Canvas</strong></span> точку <strong>(</strong><mark class="user">x</mark><strong>+j, </strong><mark class="user">y</mark><strong>+i)</strong> в цвет <mark class="user">c</mark>:<br />
+<span class="text-neon">setPoint(x+j, y+i, c)</span></p>
+
+<hr>
 <h3>Арканоид(9)</h3>
 <p>Теперь займемся классом <span class="text-corporate"><strong>Canvas</strong></span>.<br />
 Он у нас будет содержать матрицу (<em><strong>двумерный массив</strong></em>), куда мы будем &#171;<em><strong>рисовать</strong></em>&#171;.<br />
