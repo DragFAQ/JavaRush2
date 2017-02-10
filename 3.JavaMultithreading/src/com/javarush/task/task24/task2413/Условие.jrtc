@@ -1,4 +1,20 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big13">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big14">
+<h3>Арканоид(14)</h3>
+<p>Чего-то не хватает в классе <span class="text-corporate"><strong>Ball</strong></span>:</p>
+<p>Во-первых надо реализовать метод <mark>move()</mark>, унаследованный от <span class="text-corporate"><strong>BaseObject</strong></span>:<br />
+а) x должен увеличиваться на <mark class="user">dx</mark> каждый ход<br />
+б) y должен увеличиваться на <mark class="user">dy</mark> каждый ход<br />
+если шарик &#171;<em><strong>заморожен</strong></em>&#171;, то <mark class="user">x</mark> и <mark class="user">y</mark> меняться не должны</p>
+<p>Во-вторых надо реализовать метод <mark>draw(Canvas <strong>canvas</strong>)</mark>:<br />
+на объекте canvas необходимо вызвать метод <mark>setPoint</mark> с параметрами (<mark class="user">x</mark>, <mark class="user">y</mark>, &#8216;<strong>O</strong>&#8216;)</p>
+<p>В-третьих надо реализовать метод <mark>start()</mark><br />
+Именно его вызов &#171;<em><strong>размораживает</strong></em>&#187; шарик.<br />
+Что для этого надо сделать &#8212; это ты уже сам реши.</p>
+<p><strong>P.S.</strong> <em>Чуть не забыл! Поля </em><mark class="user">x</mark>, <em><mark class="user">y</mark> и <mark class="user">radius</mark> объявлены в классе </em><span class="text-corporate"><strong>BaseObject</strong></span><em> с модификатором доступа private,</em><br />
+<em> что не очень-то удобно. Измени его на </em><strong><span class="text-corporate">protected</span></strong><em>, чтобы все потомки класса </em><span class="text-corporate"><strong>BaseObject</strong></span><em> имели контроль над своими</em><br />
+<em> координатами и размерами, без необходимости пользоваться &#171;</em><strong>чужими</strong><em>&#187; <strong>геттерами</strong> и <strong>сеттерами</strong>.</em></p>
+
+<hr>
 <h3>Арканоид(13)</h3>
 <p>Класс <span class="text-corporate"><strong>Ball</strong></span> уже посложнее &#8212; шарик же двигается.</p>
 <p>Нам понадобятся приватные поля:<br />
