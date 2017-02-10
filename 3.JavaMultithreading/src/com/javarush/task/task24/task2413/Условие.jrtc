@@ -1,4 +1,27 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big18">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big19">
+<h3>Арканоид(19)</h3>
+<p>Осталось совсем чуть-чуть.</p>
+<p>В классе <span class="text-corporate"><strong>Arkanoid</strong></span> создай поле приватное <mark class="user">isGameOver</mark> типа <span class="text-neon">boolean</span>.</p>
+<p>Реализуй метод <mark>checkBricksBump</mark>.<br />
+В этом методе надо проверить &#8212; не столкнулся ли шарик с каким-нибудь из &#171;<em><strong>кирпичей</strong></em>&#171;.<br />
+Для проверки столкновения используй метод <mark>isIntersec</mark>.<br />
+<strong>Если шарик все-таки попал в кирпич, то:</strong><br />
+а) шарик <em><strong>отлетает</strong></em> в случайном направлении:<br />
+<span class="text-neon">double angle = Math.random() * 360;</span><br />
+<span class="text-neon"> ball.setDirection(angle);</span><br />
+б) кирпич <em><strong>умирает</strong></em> &#8212; надо удалить его из списка всех кирпичей.</p>
+<p>Реализуй метод <mark>checkStandBump</mark>.<br />
+В этом методе надо проверить &#8212; не ударился ли шарик о подставку.<br />
+Для проверки столкновения используй метод isIntersec.<br />
+Если шарик все-таки ударился о подставку, то:<br />
+шарик отлетает в случайным направлении вверх:<br />
+<span class="text-neon">double angle = 90 + 20 * (Math.random() &#8212; 0.5);</span><br />
+<span class="text-neon"> ball.setDirection(angel);</span></p>
+<p>Реализуй метод <mark>checkEndGame</mark>.<br />
+Если координата y шарика больше чем высота поля игры (<mark class="user">height</mark>), значит шарик улетел вниз за границу экрана.<br />
+В этом случае надо переменную <mark class="user">isGameOver</mark> установить в <span class="text-neon"><strong>true</strong></span>.</p>
+
+<hr>
 <h3>Арканоид(18)</h3>
 <p>Теперь вернемся к классу <span class="text-corporate"><strong>Arkanoid</strong></span>.</p>
 <p>Реализуй методы:<br />
