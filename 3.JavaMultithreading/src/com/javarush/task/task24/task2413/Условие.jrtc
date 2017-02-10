@@ -1,4 +1,11 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big01">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big02">
+<h3>Арканоид(2)</h3>
+<p>Главному <strong>классу</strong> (<span class="text-corporate"><strong>Arkanoid</strong></span>) нужно будет хранить информацию о размерах поля, где будут происходить все действия.</p>
+<p>Поэтому:<br />
+а) добавь в класс <span class="text-corporate"><strong>Arkanoid</strong></span> два приватных поля <mark class="user">width</mark>(<strong>ширина</strong>) и <mark class="user">height</mark>(<strong>высота</strong>) типа <span class="text-corporate">int</span><br />
+б) создай для них публичные <strong>геттеры</strong> и <strong>сеттеры</strong></p>
+
+<hr>
 <h3>Арканоид(1)</h3>
 <p>Давай сегодня напишем игру <strong>Арканоид</strong>.</p>
 <p>В оригинале это выглядит примерно так <em>http://www.youtube.com/watch?v=Th-Z6QQ5AOQ</em><br />
