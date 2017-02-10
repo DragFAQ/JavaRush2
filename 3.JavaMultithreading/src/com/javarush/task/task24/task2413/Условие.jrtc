@@ -1,4 +1,21 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big14">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big15">
+<h3>Арканоид(15)</h3>
+<p>Не поверишь, но и это еще не все.</p>
+<p>Во-первых нужен метод <mark>setDirection</mark>,<br />
+который не только устанавливает значение переменной <mark class="user">direction</mark>,<br />
+но и вычисляет новые значения переменных <mark class="user">dx</mark> и <mark class="user">dy</mark>.</p>
+<p><strong>Код должен выглядеть примерно так:</strong><br />
+<span class="text-neon">this.direction = direction;</span><br />
+<span class="text-neon"> double angel = Math.toRadians(direction);</span><br />
+<span class="text-neon"> dx = Math.cos(angle) * speed;</span><br />
+<span class="text-neon"> dy = -Math.sin(angle) * speed.</span></p>
+<p>Во-вторых шарик может удариться о стенку.<br />
+При этом он должен от нее отскочить.</p>
+<p><strong>Для этого нам понадобится еще один метод:</strong><br />
+<mark>void checkRebound(int <strong>minx</strong>, int <strong>maxx</strong>, int <strong>miny</strong>, int <strong>maxy</strong>)</mark></p>
+<p>Создай его, а кодом я займусь сам.</p>
+
+<hr>
 <h3>Арканоид(14)</h3>
 <p>Чего-то не хватает в классе <span class="text-corporate"><strong>Ball</strong></span>:</p>
 <p>Во-первых надо реализовать метод <mark>move()</mark>, унаследованный от <span class="text-corporate"><strong>BaseObject</strong></span>:<br />
