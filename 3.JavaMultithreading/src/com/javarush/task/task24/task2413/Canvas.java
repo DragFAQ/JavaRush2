@@ -28,6 +28,16 @@ public class Canvas {
         }
     }
 
+    public void clear() {
+        matrix =  new char[height + 2][width + 2];
+    }
+
+    public void print() {
+        for (int i = 0; i < height + 2; i++) {
+            System.out.println(matrix[i]);
+        }
+    }
+
     public int getWidth() {
         return width;
     }

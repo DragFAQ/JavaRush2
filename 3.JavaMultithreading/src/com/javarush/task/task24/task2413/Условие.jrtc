@@ -1,4 +1,14 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big10">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big11">
+<h3>Арканоид(11)</h3>
+<p>Еще <span class="text-corporate"><strong>Canvas</strong></span> понадобится два метода, напиши их.<br />
+а) метод <mark>clear()</mark><br />
+Этот метод будет очищать матрицу, чтобы на ней снова можно было рисовать.<br />
+Можешь просто заново инициализировать <mark class="green">matrix</mark> пустым массивом правильной размерности.<br />
+б) метод <mark>print()</mark><br />
+Этот метод рисует матрицу на экран.<br />
+Тут уже ты должен сам разобраться: вывести набор символов не так уж и сложно.</p>
+
+<hr>
 <h3>Арканоид(10)</h3>
 <p>Что мы будем делать с <span class="text-corporate"><strong>Canvas</strong></span>?<br />
 Мы будем рисовать на нем (<em>в его матрице</em>).<br />
