@@ -1,7 +1,6 @@
 package com.javarush.task.task36.task3608;
 
 import com.javarush.task.task36.task3608.controller.Controller;
-import com.javarush.task.task36.task3608.model.FakeModel;
 import com.javarush.task.task36.task3608.model.MainModel;
 import com.javarush.task.task36.task3608.model.Model;
 import com.javarush.task.task36.task3608.view.EditUserView;
@@ -21,7 +20,8 @@ public class Solution {
         controller.setEditUserView(editUserView);
 
         usersView.fireEventShowAllUsers();
-        usersView.fireEventOpenUserEditForm(126);
+        usersView.fireEventOpenUserEditForm(126L);
+        editUserView.fireEventUserDeleted(124L);
         usersView.fireEventShowDeletedUsers();
     }
 }
