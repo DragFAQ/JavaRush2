@@ -1,4 +1,22 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big06">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big07">
+<h3>Арканоид(7)</h3>
+<p>Теперь перейдем к классу <strong><span class="text-corporate">BaseObject</span></strong>.<br />
+Я хочу сделать несколько предложений.</p>
+<p><strong>Во-первых</strong> для простоты считать все объекты у нас будут круглыми.<br />
+Нет, отрисовывать их мы будем фигурными, как и раньше.<br />
+А вот при расчетах из взаимодействия исходить из того, что они круглые.<br />
+Так &#8212; гораздо проще.</p>
+<p><strong>Во-вторых</strong>. Пусть координаты объектов и радиус будут вещественными числами.<br />
+Это придаст плавность движениям и точность всем вычислениям.<br />
+А при отрисовке мы будем их округлять.</p>
+<p><strong>Итак:</strong><br />
+а) Добавь в класс <span class="text-corporate"><strong>BaseObject</strong></span> приватные поля <mark class="user">x</mark> (<span class="text-corporate">double</span>), <mark class="user">y</mark> (double), <mark class="user">radius</mark> (<span class="text-corporate">double</span>).<br />
+б) Добавь <strong>геттеры</strong> и <strong>сеттеры</strong>.<br />
+в) Добавь конструктор <mark>BaseObject(double <strong>x</strong>, double <strong>y</strong>, double <strong>radius</strong>)</mark>.<br />
+г) Пройдись по все <strong>классам-наследникам</strong> и поправь у них конструкторы.</p>
+<p>Если вы пользуйтесь <strong>Intellij IDEA</strong> &#8212; <span class="text-neon">Alt+Insert</span> вам в помощь.</p>
+
+<hr>
 <h3>Арканоид(6)</h3>
 <p>У нас будут &#171;<em><strong>кирпичи</strong></em>&#171;, &#171;<em><strong>шарик</strong></em>&#187; и &#171;<em><strong>подставка</strong></em>&#187; и у них будет много общего.<br />
 Они будут перемещаться по полю и отрисовываться.<br />
