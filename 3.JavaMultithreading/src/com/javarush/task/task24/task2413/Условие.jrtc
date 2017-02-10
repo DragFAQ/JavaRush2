@@ -1,4 +1,19 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big12">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big13">
+<h3>Арканоид(13)</h3>
+<p>Класс <span class="text-corporate"><strong>Ball</strong></span> уже посложнее &#8212; шарик же двигается.</p>
+<p>Нам понадобятся приватные поля:<br />
+а) <mark class="user">speed</mark> (<em>скорость шарика</em>) типа <span class="text-neon">double</span>;<br />
+б) <mark class="user">direction</mark> (<em>направление движения в градусах: от </em><strong><span class="text-user">0</span></strong><em> до </em><span class="text-user"><strong>360</strong></span>) типа <span class="text-neon">double</span>;<br />
+в) <mark class="user">dx</mark> (<em>расстояние по x, которое проходит шарик за один шаг. вычисляется на основе </em><mark class="user">speed</mark><em> и </em><mark class="user">direction</mark>) типа <span class="text-neon">double</span>;<br />
+г) <mark class="user">dy</mark> (<em>расстояние по y, которое проходит шарик за один шаг. вычисляется на основе</em> <mark class="user">speed</mark> и <mark class="user">direction</mark>) типа <span class="text-neon">double</span>;<br />
+д) <mark class="user">isFrozen</mark> (&#171;<strong><em>истина</em></strong>&#187; <em>если шарик</em> &#171;<em><strong>заморожен</strong></em>&#187; &#8212; <em>не двигается</em>) типа <span class="text-neon">boolean</span>.</p>
+<p>Не забудь добавить геттеры для всех полей этого класса, кроме <mark class="user">isFrozen</mark> (<em>его мы будем использовать только внутри класса</em> <span class="text-corporate"><strong>Ball</strong></span>).</p>
+<p><strong>А еще сделай-ка конструктор:</strong><br />
+а) параметры &#8212; <mark class="user">x</mark>, <mark class="user">y</mark>, <mark class="user">speed</mark>, <mark class="user">direction</mark>;<br />
+б) радиус (<em>для вызова родительского класса</em>) всегда равен <strong><span class="text-user">1</span></strong>;<br />
+в) не забудь установить <mark class="user">isFrozen</mark> в <strong><span class="text-neon">true</span></strong> &#8212; в начале игры шарик никуда не летит.</p>
+
+<hr>
 <h3>Арканоид(12)</h3>
 <p>Теперь напишем класс <span class="text-corporate"><strong>Brick</strong></span>.</p>
 <p>Во-первых займемся конструктором и в нем точно зададим &#171;<em><strong>радиус</strong></em>&#187; всех кирпичей.<br />
