@@ -1,4 +1,12 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big03">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big04">
+<h3>Арканоид(4)</h3>
+<p>Также классу <span class="text-corporate"><strong>Arkanoid</strong></span> нужно будет хранить ссылку на шарик (<span class="text-corporate"><strong>Ball</strong></span>), &#171;<em><strong>подставку</strong></em>&#187; <span class="text-corporate"><strong>Stand</strong></span> и список &#171;<em><strong>кирпичей</strong></em>&#171;.</p>
+<p><strong>Надо:</strong><br />
+а) создать в классе <span class="text-corporate"><strong>Arkanoid</strong></span> два private поля: <mark class="green">ball</mark> типа <span class="text-corporate"><strong>Ball</strong></span> и <mark class="user">stand</mark> типа <strong><span class="text-corporate">Stand</span></strong><br />
+б) добавить private поле <mark class="user">bricks</mark> типа <span class="text-red"><strong>List</strong>&lt;Brick&gt;</span><br />
+в) добавь для них публичные <strong>геттеры</strong> и <strong>сеттеры</strong></p>
+
+<hr>
 <h3>Арканоид(3)</h3>
 <p>Пожалуй, пора добавить конструктор в класс <span class="text-corporate"><strong>Arkanoid</strong></span>.<br />
 Конструктор должен принимать два параметра типа <span class="text-corporate">int</span> (<mark class="user">width</mark> и <mark class="user">height</mark>) и корректно устанавливать значения соответствующих полей класса.</p>
