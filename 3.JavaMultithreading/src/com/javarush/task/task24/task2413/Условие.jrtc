@@ -1,4 +1,13 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big17">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big18">
+<h3>Арканоид(18)</h3>
+<p>Теперь вернемся к классу <span class="text-corporate"><strong>Arkanoid</strong></span>.</p>
+<p>Реализуй методы:<br />
+а) <mark>move()</mark><br />
+В этом методе нужно двигать все движимые объекты (<mark class="green">stand</mark><strong>, </strong><mark class="green">ball</mark>).<br />
+б) <mark>draw(Canvas <strong>canvas</strong>)</mark><br />
+В этом методе надо вызвать метод <mark>draw</mark> всех существующих объектов, которые его имеют.</p>
+
+<hr>
 <h3>Арканоид(17)</h3>
 <p><strong> Еще подставке нужны методы:</strong><br />
 а) <mark>move</mark> &#8212; см. <strong><mark class="user">move</mark></strong> в <strong><span class="text-corporate">BaseObject</span></strong><br />
