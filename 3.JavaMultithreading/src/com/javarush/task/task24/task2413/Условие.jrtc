@@ -1,4 +1,21 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big07">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big08">
+<h3>Арканоид(8)</h3>
+<p>Но и это еще не все.<br />
+Классу <strong><span class="text-corporate">BaseObject</span></strong> нужны еще методы.<br />
+Пока это будут пустые методы <mark>draw(Canvas canvas)</mark> и <mark>move()</mark>.<br />
+Классы-наследники должны будут переопределить их у себя и реализовать необходимую функциональность (<em>пока можешь оставить их пустыми, просто чтобы код компилировался</em>).<br />
+Объяви эти методы, но сделай их абстрактными.<br />
+Также сделай абстрактным сам класс <strong><span class="text-corporate">BaseObject</span></strong>.</p>
+<p>А еще нам нужно будет определять попал шарик в кирпич или в подставку.<br />
+<strong>Это будем делать так:</strong><br />
+В этом же классе, создадим специальный метод: <mark>boolean isIntersec(BaseObject <strong>o</strong>)</mark><br />
+Он будет определять &#8212; &#171;<em><strong>пересеклись</strong></em>&#187; объекты или нет. Если пересеклись &#8212; возвращать <span class="text-neon"><strong>true</strong></span>, если нет &#8212; <span class="text-neon"><strong>false</strong></span>.</p>
+<p>Т.к. объекты мы условно считаем кругами, то предлагаю такую формулу взаимодействия<br />
+Если центр круга одного объекта попал в круг другого, то будем считать, что они столкнулись.</p>
+<p><strong>Или еще проще:</strong><br />
+<span class="text-neon">дистанция_между_объектами &lt;= max (радиус_первого_объекта, радиус_второго_объекта)</span></p>
+
+<hr>
 <h3>Арканоид(7)</h3>
 <p>Теперь перейдем к классу <strong><span class="text-corporate">BaseObject</span></strong>.<br />
 Я хочу сделать несколько предложений.</p>

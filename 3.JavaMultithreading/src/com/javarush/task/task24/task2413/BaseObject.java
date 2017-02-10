@@ -1,6 +1,6 @@
 package com.javarush.task.task24.task2413;
 
-public class BaseObject {
+public abstract class BaseObject {
     private double x;
     private double y;
     private double radius;
@@ -10,6 +10,15 @@ public class BaseObject {
         this.y = y;
         this.radius = radius;
     }
+
+    public boolean isIntersec(BaseObject o) {
+        double distance = Math.sqrt((o.getX() - x) * (o.getX() - x) + (o.getY() - y) * (o.getY() - y));
+
+        return distance <= Math.max(o.getRadius(), radius);
+    }
+
+    protected abstract void draw(Canvas canvas);
+    protected abstract void move();
 
     public double getX() {
         return x;
