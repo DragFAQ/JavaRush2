@@ -1,4 +1,22 @@
-<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big04">
+<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big05">
+<h3>MVC (5)</h3>
+<p>В сервисе есть метод, который возвращает всех удаленных пользователей. Давай их отобразим.</p>
+<p>1. Распредели методы по классам <strong>MVC</strong>:</p>
+<p><span class="text-neon">public void fireEventShowDeletedUsers() {</span><br />
+<span class="text-neon"> &#8230;onShowAllDeletedUsers();</span><br />
+<span class="text-neon"> }</span></p>
+<p><span class="text-neon">public void onShowAllDeletedUsers() {</span><br />
+<span class="text-neon"> &#8230;loadDeletedUsers();</span><br />
+<span class="text-neon"> }</span></p>
+<p><span class="text-neon">public void loadDeletedUsers() {</span><br />
+<span class="text-neon"> List&lt;User&gt; users = userService.getAllDeletedUsers();</span><br />
+<span class="text-neon"> }</span></p>
+<p>Не забудь, что данные, полученные с сервера, необходимо положить в <strong><span class="text-yellow">ModelData</span></strong>. А потом обновить <mark class="green">view</mark>.<br />
+Добавь это самостоятельно в нужные методы.</p>
+<p>2. Добавь в <strong>Solution.main</strong> вызов нового метода, который ты поместил в <mark class="green">view</mark>.</p>
+<p>3. Добавь в интерфейс <span class="text-red">Model</span> метод, который ты поместил в <strong>Модель</strong>, реализуй его в <span class="text-yellow"><strong>FakeModel</strong></span>: выброси <mark class="user">UnsupportedOperationException</mark>.</p>
+
+<hr>
 <h3>MVC (4)</h3>
 <p>Пора заменять нашу фейковую Модель на реальную, которая будет получать данные из <strong><span class="text-corporate">DataSource</span></strong>.<br />
 В пакет <strong><span class="text-red">model.service</span></strong> я добавил сервис для работы с пользователями.<br />
