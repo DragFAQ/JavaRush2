@@ -1,4 +1,10 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big19">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big20">
+<h3>Арканоид(20)</h3>
+<p><strong>Отличная работа!</strong> Я добавил пару методов, а также класс <span class="text-corporate"><strong>KeyboardObserver</strong></span>.</p>
+<p>Немного отдохни перед новым уровнем и поиграй.</p>
+<p><strong>P.S.</strong> <em>Только не забудь отрегулировать высоту консоли.</em></p>
+
+<hr>
 <h3>Арканоид(19)</h3>
 <p>Осталось совсем чуть-чуть.</p>
 <p>В классе <span class="text-corporate"><strong>Arkanoid</strong></span> создай поле приватное <mark class="user">isGameOver</mark> типа <span class="text-neon">boolean</span>.</p>
