@@ -1,4 +1,17 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big11">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big12">
+<h3>Арканоид(12)</h3>
+<p>Теперь напишем класс <span class="text-corporate"><strong>Brick</strong></span>.</p>
+<p>Во-первых займемся конструктором и в нем точно зададим &#171;<em><strong>радиус</strong></em>&#187; всех кирпичей.<br />
+<strong>Пусть он выглядит так:</strong><br />
+<span class="text-neon">public Brick(double x, double y) {</span><br />
+<span class="text-neon">  super(x, y, 3);</span><br />
+<span class="text-neon"> }</span></p>
+<p>Еще нам нужно переопределить два метода <mark>move()</mark> и <mark>draw(Canvas <strong>canvas</strong>)</mark>.<br />
+Метод <mark>move()</mark> не делает ничего (<em>не содержит кода</em>), т.к. кирпич никуда не двигается.</p>
+<p>Напиши еще метод <mark>draw(Canvas <strong>canvas</strong>)</mark>.<br />
+Его кодом я займусь сам.</p>
+
+<hr>
 <h3>Арканоид(11)</h3>
 <p>Еще <span class="text-corporate"><strong>Canvas</strong></span> понадобится два метода, напиши их.<br />
 а) метод <mark>clear()</mark><br />
