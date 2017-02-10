@@ -1,4 +1,16 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big08">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big09">
+<h3>Арканоид(9)</h3>
+<p>Теперь займемся классом <span class="text-corporate"><strong>Canvas</strong></span>.<br />
+Он у нас будет содержать матрицу (<em><strong>двумерный массив</strong></em>), куда мы будем &#171;<em><strong>рисовать</strong></em>&#171;.<br />
+У матрицы есть ширина и высота.<br />
+А еще будем в ней хранить не <strong>числа</strong> (<span class="text-corporate">int</span>), а <strong>символы</strong> (<span class="text-corporate">char</span>).</p>
+<p><strong>Надо:</strong><br />
+а) Добавить в класс два приватных поля <mark class="user">width</mark> и <mark class="user">height</mark>.<br />
+б) Добавить в класс приватное поле <mark class="user">matrix</mark> (<span class="text-corporate">char[][]</span>).<br />
+в) Добавить конструктор с двумя параметрами типа <span class="text-corporate">int</span> (<mark class="user">width</mark> и <mark class="user">height</mark>), поле <mark class="user">matrix</mark> должно быть инициализировано пустым массивом размерностью <strong>[</strong><mark class="user">height</mark><strong>+2][</strong><mark class="user">width</mark><strong>+2]</strong>.<br />
+г) Добавить геттеры и сеттеры для всех приватных полей класса.</p>
+
+<hr>
 <h3>Арканоид(8)</h3>
 <p>Но и это еще не все.<br />
 Классу <strong><span class="text-corporate">BaseObject</span></strong> нужны еще методы.<br />
