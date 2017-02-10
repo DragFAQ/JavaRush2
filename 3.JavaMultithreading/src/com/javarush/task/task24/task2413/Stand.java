@@ -10,6 +10,14 @@ public class Stand extends BaseObject {
         direction = 0;
     }
 
+    public void moveLeft() {
+        direction = -1;
+    }
+
+    public void moveRight() {
+        direction = 1;
+    }
+
     @Override
     protected void draw(Canvas canvas) {
 
@@ -17,7 +25,7 @@ public class Stand extends BaseObject {
 
     @Override
     protected void move() {
-
+        x += direction * speed;
     }
 
     public double getSpeed() {
