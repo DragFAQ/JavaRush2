@@ -52,4 +52,21 @@ public class Snake {
     }
 
     public void move(int hor, int vert) {}
+
+    private void checkBorders(SnakeSection head) {
+        if (Room.game == null || head == null)
+            isAlive = false;
+        else if(head.getX() < 0 ||
+                head.getY() < 0 ||
+                head.getX() >= Room.game.getWidth() ||
+                head.getY() >= Room.game.getHeight())
+            isAlive = false;
+    }
+
+    private void checkBody(SnakeSection head) {
+        if (head == null || sections == null)
+            isAlive = false;
+        else if (sections.contains(head))
+            isAlive = false;
+    }
 }

@@ -1,4 +1,20 @@
-<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big15">
+<div class="wdghtml" taskKey="com.javarush.task.task23.task2312.big16">
+<h3>Змейка(16)</h3>
+<p>Ничто не вечно. Так и змея <strong>должна умирать</strong>, если она врезается в стену или саму себя.</p>
+<p>Для определения, не пересекается ли змея сама с собой, можно сделать очень простую проверку:<br />
+содержит ли список sections &#171;<em><strong>новую голову змеи</strong></em>&#171;.</p>
+<p><strong>Код для этого будет выглядеть примерно так:</strong><br />
+<span class="text-neon">if (sections.contains(head))</span></p>
+<p>При этом <mark class="user">head</mark> должен быть еще не добавлен в список <span class="text-red">sections</span>, иначе будет всегда <strong><span class="text-neon">true</span></strong>.<br />
+Но чтобы этот код работал, надо реализовать методы сравнения объектов (<mark>equals</mark> и <mark>hashCode</mark>) в классе <span class="text-corporate"><strong>SnakeSection</strong></span>.</p>
+<p><strong>Подсказка:</strong><br />
+<em>Используй </em><span class="text-neon">Alt+Insert</span><em> в <strong>Intellij IDEA</strong> для автоматической генерации методов </em><mark>equals</mark><em> и </em><mark>hashCode</mark><em>.</em></p>
+<p><strong>Задание:</strong><br />
+а) реализуй методы <mark>equals</mark> и <mark>hashCode</mark> в классе SnakeSection.<br />
+б) реализуй метод <mark>checkBorders(SnakeSection <strong>head</strong>)</mark>: если голова змеи за границами комнаты &#8212; змея умирает (<mark class="user">isAlive</mark> <em>=</em> <span class="text-neon"><strong>false</strong></span>)<br />
+в) реализуй метод <mark>checkBody(SnakeSection <strong>head</strong>)</mark>: если голова змеи пересекается с ее телом &#8212; змея умирает (<mark class="user">isAlive</mark> = <span class="text-neon"><strong>false</strong></span>)</p>
+
+<hr>
 <h3>Змейка(15)</h3>
 <p>Теперь осталось допилить змею.</p>
 <p><strong>Вот что я предлагаю насчет движения змеи:</strong><br />

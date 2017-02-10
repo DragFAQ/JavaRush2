@@ -1,0 +1,14 @@
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big01">
+<h3>Арканоид(1)</h3>
+<p>Давай сегодня напишем игру <strong>Арканоид</strong>.</p>
+<p>В оригинале это выглядит примерно так <em>http://www.youtube.com/watch?v=Th-Z6QQ5AOQ</em><br />
+Для начала мы напишем <strong>упрощенную</strong> <strong>версию</strong> этой игры.<br />
+У нас будут кубики, шарик и летающая &#171;<em><strong>подставка</strong></em>&#171;, которая не дает шарику упасть.</p>
+<p>Поэтому нам понадобятся классы:<br />
+а) <span class="text-corporate"><strong>Arkanoid</strong></span> &#8212; класс в котором происходят основные действия. Также в нем будет наша точка входа в программу, метод <mark>main</mark>.<br />
+б) <span class="text-corporate"><strong>Ball</strong></span> &#8212; <strong>шарик</strong>.<br />
+в) <strong><span class="text-corporate">Brick</span></strong> &#8212; &#171;<em><strong>кирпичи</strong></em>&#171;, которые мы сбиваем шариком.<br />
+г) <span class="text-corporate"><strong>Stand</strong></span> &#8212; <strong>летающая</strong> <strong>подставка</strong>.</p>
+<p>Создай их, и не забудь о методе <mark>public static void main (String[] <strong>args</strong>)</mark> в класе <span class="text-corporate"><strong>Arkanoid</strong></span>.</p>
+
+</div>
