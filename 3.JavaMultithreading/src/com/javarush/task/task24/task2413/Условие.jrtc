@@ -1,4 +1,18 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big15">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big16">
+<h3>Арканоид(16)</h3>
+<p>И наконец &#171;<em><strong>подставка</strong></em>&#171;!<br />
+Ей понадобятся такие приватные поля:<br />
+а) <mark class="user">speed</mark> (скорость шарика) типа <span class="text-neon">double</span>;<br />
+б) <mark class="user">direction</mark> (<em>направление движения по оси</em> <mark class="user">x</mark>: <span class="text-user"><strong>1</strong></span> &#8212; <em>вправо</em>, <strong><span class="text-user">-1</span></strong> &#8212; <em>влево</em>, <span class="text-user"><strong>0</strong></span> &#8212; <em>начальное значение, стоим на месте</em>) типа <span class="text-neon">double</span>.</p>
+<p><strong>Также создай для них геттеры.</strong></p>
+<p><strong>А еще с тебя конструктор, примерно вот такой:</strong><br />
+<code>public Stand(double x, double y) {<br />
+  super(x, y, 3);<br />
+  speed = 1;<br />
+  direction = 0;<br />
+}</code></p>
+
+<hr>
 <h3>Арканоид(15)</h3>
 <p>Не поверишь, но и это еще не все.</p>
 <p>Во-первых нужен метод <mark>setDirection</mark>,<br />
