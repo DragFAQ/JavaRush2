@@ -1,4 +1,18 @@
-<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big08">
+<div class="wdghtml" taskKey="com.javarush.task.task36.task3608.big09">
+<h3>MVC (9)</h3>
+<p>Это последнее задание по <strong>MVC</strong>.</p>
+<p>1. Следуя принципу <strong>MVC</strong> аналогично реализации предыдущих методов сделай следующее:<br />
+напиши логику обновления пользователя. После обновления должен отображаться список пользователей.</p>
+<p>Распредели методы по классам <strong>MVC</strong>, используя следующие сигнатуры публичных методов:<br />
+<span class="text-neon">void fireEventUserChanged(String name, long id, int level)</span><br />
+<span class="text-neon"> void onUserChange(String name, long id, int level)</span><br />
+<span class="text-neon"> void changeUserData(String name, long id, int level)</span></p>
+<p>где <strong>name</strong> и <strong>level</strong> &#8212; это новые значения для пользователя с выбранным <strong>id</strong>.</p>
+<p><strong>Примечание:</strong> <em>метод, который ты собираешься добавить в Вью нужно добавить в</em> <strong><span class="text-yellow">EditUserView</span></strong>.</p>
+<p>2. Добавь в <mark>main</mark> вызов <mark>fireEventUserChanged</mark> перед вызовом метода <mark>fireEventShowDeletedUsers()</mark>.</p>
+<p>3. Добавь в интерфейс <strong><span class="text-yellow">Model</span></strong> метод, который ты поместил в Модель, реализуй его в <strong><span class="text-yellow">FakeModel</span></strong>: выброси <strong><span class="text-corporate">UnsupportedOperationException</span></strong>.</p>
+
+<hr>
 <h3>MVC (8)</h3>
 <p>1. Следуя принципу <strong>MVC</strong> аналогично реализации предыдущих методов сделай следующее:<br />
 напиши логику удаления пользователя. После удаления должен отображаться список пользователей.</p>
