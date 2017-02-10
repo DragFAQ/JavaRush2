@@ -1,4 +1,9 @@
-<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big02">
+<div class="wdghtml" taskKey="com.javarush.task.task24.task2413.big03">
+<h3>Арканоид(3)</h3>
+<p>Пожалуй, пора добавить конструктор в класс <span class="text-corporate"><strong>Arkanoid</strong></span>.<br />
+Конструктор должен принимать два параметра типа <span class="text-corporate">int</span> (<mark class="user">width</mark> и <mark class="user">height</mark>) и корректно устанавливать значения соответствующих полей класса.</p>
+
+<hr>
 <h3>Арканоид(2)</h3>
 <p>Главному <strong>классу</strong> (<span class="text-corporate"><strong>Arkanoid</strong></span>) нужно будет хранить информацию о размерах поля, где будут происходить все действия.</p>
 <p>Поэтому:<br />
