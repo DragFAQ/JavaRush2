@@ -1,0 +1,10 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2504">
+<h3>Switch для нитей</h3>
+<p><strong> Обработай список нитей в зависимости от состояния:</strong><br />
+1. Если нить еще <em><strong>не запущена</strong></em>, то запусти ее.<br />
+2. Если нить <em><strong>в ожидании</strong></em>, то прерви ее.<br />
+3. Если нить <em><strong>работает</strong></em>, то проверь маркер <mark class="user">isInterrupted</mark>.<br />
+4. Если нить <em><strong>прекратила работу</strong></em>, то выведи в консоль ее приоритет.<br />
+Используй <mark>switch</mark>.</p>
+
+</div>

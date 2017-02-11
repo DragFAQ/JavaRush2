@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2506">
+<h3>Мониторинг состояния нити</h3>
+<p>Cоздай класс нити <strong><span class="text-corporate">LoggingStateThread</span></strong>, которая будет выводить в консоль все состояния (<mark class="user">State</mark>) переданной в конструктор нити.<br />
+Нить <strong><span class="text-corporate">LoggingStateThread</span></strong> должна сама завершаться после остановки переданной в конструктор нити.<br />
+Метод <mark>main</mark> не участвует в тестировании.</p>
+
+</div>

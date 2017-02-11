@@ -1,0 +1,10 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2505">
+<h3>Без дураков</h3>
+<p>1. Создай <span class="text-corporate"><strong>private class</strong> <strong>MyUncaughtExceptionHandler</strong></span>, который на перехват исключения должен подождать половину секунды, а затем вывести на экран <mark class="user">secretKey</mark>, имя трэда и сообщение возникшего исключения.<br />
+Используй <mark>String.format(&#8230;)</mark>.</p>
+<p><strong>Пример:</strong><br />
+<code>super secret key, Thread-0, it's an example</code></p>
+<p>2. Разберись в последовательности выполняемого кода и обеспечь логирование возникновения исключения в <strong>п.1.</strong><br />
+3. Метод <mark>main</mark> в тестировании не участвует.</p>
+
+</div>
