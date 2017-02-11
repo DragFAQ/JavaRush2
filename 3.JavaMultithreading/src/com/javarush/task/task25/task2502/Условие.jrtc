@@ -1,0 +1,8 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2502">
+<h3>Машину на СТО не повезем!</h3>
+<p>Инициализируй поле <mark class="user">wheels</mark> используя данные из <mark class="green">loadWheelNamesFromDB</mark>.<br />
+Выкинь исключение в случае некорректных данных.</p>
+<p><strong>Подсказка:</strong> <em>если что-то не то с колесами, то это не машина!</em><br />
+Сигнатуры не менять.</p>
+
+</div>

@@ -1,0 +1,6 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2501">
+<h3>Новые возможности!</h3>
+<p>Используя возможности enum-а реализуй метод <mark>getLetterPosition</mark>, который должен возвращать позицию буквы.<br />
+Позиция буквы <strong><span class="text-green">A</span></strong> &#8212; <span class="text-user"><strong>1</strong></span>.</p>
+
+</div>
