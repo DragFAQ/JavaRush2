@@ -1,0 +1,9 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2503">
+<h3>Свой enum</h3>
+<p>Реализуй интерфейс <strong><span class="text-yellow">Columnable</span></strong> у <mark class="green">Column</mark>, описание методов смотрите в джавадоках.<br />
+Реализуй логику метода <mark class="green">Column</mark>.<mark>getVisibleColumns</mark>.<br />
+Метод <mark class="green">Column</mark>.<mark>configureColumns</mark> уже реализован, его не меняй.<br />
+Создавать дополнительные поля нельзя.<br />
+Метод <mark>main</mark> не участвует в тестировании.</p>
+
+</div>
