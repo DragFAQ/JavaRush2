@@ -1,0 +1,8 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2511">
+<h3>Вооружаемся до зубов!</h3>
+<p>Создай свой <strong><span class="text-corporate">UncaughtExceptionHandler</span></strong> в виде локального класса внутри конструктора.<br />
+<span class="text-corporate"><strong>UncaughtExceptionHandler</strong></span> должен маскировать звездочками имя трэда и выводить в консоль описание возникшей ошибки.<br />
+«<strong style="font-style: italic;">Thread-0</strong>» должно быть заменено на «<em><strong>********</strong>»</em>.<br />
+«<strong style="font-style: italic;">Thread-4321</strong>» должно быть заменено на «<em><strong>***********</strong>»</em>.</p>
+
+</div>

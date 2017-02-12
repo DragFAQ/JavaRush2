@@ -1,0 +1,13 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2512">
+<h3>Живем своим умом</h3>
+<p>В классе <span class="text-corporate"><strong>Solution</strong></span> реализуй интерфейс <strong><span class="text-yellow">UncaughtExceptionHandler</span></strong>, который должен:<br />
+1. прервать нить, которая бросила исключение.<br />
+2. вывести в консоль стек исключений, начиная с самого вложенного.</p>
+<p><strong>Пример исключения:<br />
+</strong><code>new Exception("ABC", new RuntimeException("DEF", new IllegalAccessException("GHI")))</code></p>
+<p><strong>Пример вывода:</strong><br />
+<code>java.lang.IllegalAccessException: GHI</code><br />
+<code> java.lang.RuntimeException: DEF</code><br />
+<code> java.lang.Exception: ABC</code></p>
+
+</div>

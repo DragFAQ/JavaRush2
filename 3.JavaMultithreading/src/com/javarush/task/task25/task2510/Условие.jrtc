@@ -1,0 +1,9 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2510">
+<h3>Поживем - увидим</h3>
+<p>Все исключения, которые возникают в процессе работы нити <strong><span class="text-corporate">Solution</span></strong>, должны быть обработаны одним из вариантов:<br />
+1. Если это <strong><span class="text-neon">Error</span></strong>, то вывести в консоль &#171;<em><strong>Нельзя дальше работать</strong></em>&#171;.<br />
+2. Если это <strong><span class="text-neon">Exception</span></strong>, то вывести в консоль &#171;<em><strong>Надо обработать</strong></em>&#171;.<br />
+3. Если это <strong><span class="text-neon">Throwable</span></strong>, то вывести в консоль &#171;<em><strong>ХЗ</strong></em>&#171;.<br />
+Реализуй эту логику.</p>
+
+</div>
