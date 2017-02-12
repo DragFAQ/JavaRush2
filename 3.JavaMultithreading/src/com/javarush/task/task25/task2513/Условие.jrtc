@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2513">
+<h3>Обеспечение отсутствия прерывания важной операции</h3>
+<p>Просмотри метод <mark>moveMoney</mark>.<br />
+Если <mark class="green">RANDOM</mark>.<mark>nextInt(<strong>5000</strong>)</mark> больше порогового значения <mark class="green">THRESHOLD_VALUE</mark>, то обеспечь переуступку кванта времени (<em>переход хода для текущей нити</em>).<br />
+Добавь этот код в единственное допустимое место.</p>
+
+</div>
