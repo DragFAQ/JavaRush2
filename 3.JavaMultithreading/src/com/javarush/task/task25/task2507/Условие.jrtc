@@ -1,0 +1,6 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2507">
+<h3>Работать в поте лица!</h3>
+<p>Реализуй логику метода <mark>interrupt</mark>, который должен прерывать трэд предварительно закрыв используемые ресурсы.<br />
+Используй метод <strong><span class="text-corporate">super-класса</span></strong> в блоке <strong>finally</strong>.</p>
+
+</div>

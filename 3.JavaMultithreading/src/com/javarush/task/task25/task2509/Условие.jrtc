@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task25.task2509">
+<h3>Все не так легко, как кажется</h3>
+<p>1. Почитать в инете про <strong>Socket</strong>, <strong>ThreadPoolExecutor</strong>, <strong>RunnableFuture</strong>, <strong>Callable</strong>.<br />
+2. Реализуй логику метода <mark>cancel</mark> в классе <span class="text-corporate"><strong>SocketTask</strong></span>.<br />
+3. Реализуй логику метода <mark>cancel</mark> для локального класса внутри метода <mark>newTask</mark> в классе <strong><span class="text-corporate">SocketTask</span></strong>.</p>
+
+</div>
