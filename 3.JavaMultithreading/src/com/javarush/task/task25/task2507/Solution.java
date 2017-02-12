@@ -19,12 +19,19 @@ public class Solution extends Thread {
 
     public void interrupt() {
         //implement logic here
+        try {
+            in.close();
+            socket.close();
+        } catch (IOException e) {
+        } finally {
+            super.interrupt();
+        }
     }
 
     public void run() {
         try {
             byte[] buf = new byte[BUFFER_SIZE];
-            while (true) {
+            while (isInterrupted()) {
                 int count = in.read(buf);
                 if (count < 0) {
                     break;
@@ -34,7 +41,8 @@ public class Solution extends Thread {
                     }
                 }
             }
-        } catch (IOException ignored) {}
+        } catch (IOException ignored) {
+        }
     }
 
     public static void main(String[] args) {
