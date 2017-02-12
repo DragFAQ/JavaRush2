@@ -13,10 +13,15 @@ public class Solution {
 
         public void run() {
             System.out.println("begin-" + index);
+            Thread.yield();
             System.out.println("end-" + index);
         }
     }
 
     public static void main(String[] args) {
+        for (int i = 0; i <5 ; i++) {
+            Thread pff_thread=new Thread(new YieldRunnable(i));
+            pff_thread.start();
+        }
     }
 }
