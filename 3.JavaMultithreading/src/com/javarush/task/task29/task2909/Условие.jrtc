@@ -1,4 +1,16 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big12">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big13">
+<h3>Рефакторинг (13)</h3>
+<p>Разберись с кодом пакета <strong><span class="text-red">user</span></strong> (<em>пользователь</em>).<br />
+13.1. Извлечение метода. Добавь метод <mark>printInfo()</mark>, который будет выводить <strong>имя</strong> и <strong>фамилию</strong><br />
+в консоль так же, как это делается в методе <mark>printUsers()</mark>. Замени повторяющийся код<br />
+метода <mark>printUsers()</mark> его вызовом.<br />
+13.2. Встраивание метода. Избавься от метода <mark>ageLessThan16()</mark>.<br />
+13.3. Перемещение метода. Перемести методы <mark>printInfo()</mark> и <mark>printAdditionalInfo()</mark> в класс <span class="text-corporate"><strong>User</strong></span>.<br />
+13.4. Расщепление переменной. Переменная age в методе <mark>calculateAverageAge() </mark>используется для разных промежуточных значений. Перепиши метод без использования этой переменной.<br />
+13.5. Удаление присваиваний параметрам. Перепиши метод <mark>calculateRate()</mark>, чтобы он не<br />
+пытался менять входные параметры, а просто возвращал рассчитанное значение.</p>
+
+<hr>
 <h3>Рефакторинг (12)</h3>
 <p>12.1. Объединение условных операторов.<br />
 12.1.1. Добавь внутренний метод, сообщающий, могут ли быть перевезены пассажиры<br />
