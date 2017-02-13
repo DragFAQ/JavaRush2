@@ -1,4 +1,18 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big13">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big14">
+<h3>Рефакторинг (14)</h3>
+<p>14.1. Перемещение поля. Замени поля <mark class="user">isManAnya</mark> и <mark class="user">isManRoma</mark> полем man в нужном классе.<br />
+Добавь <strong>сеттер</strong> и <strong>геттер</strong> для нового поля (<em>при выборе имен методов учти тип поля</em>).<br />
+14.2. Извлечение класса.<br />
+14.2.1. Добавь класс <strong><span class="text-corporate">Address</span></strong> в пакет <strong><span class="text-red">user</span></strong>.<br />
+14.2.2. Перенеси поля <mark class="user">country</mark>, <mark class="user">city</mark> и <mark class="user">house</mark> в новый класс.<br />
+14.2.3. Добавь <strong>сеттеры</strong> и <strong>геттеры</strong> для них.<br />
+14.2.4. Перепиши класс <strong><span class="text-corporate">User</span></strong>, используя поле класса <strong><span class="text-corporate">Address</span></strong> <mark class="user">address</mark>.<br />
+14.3. Встраивание класса. Класс <strong><span class="text-corporate">House</span></strong> почти ничего не делает, избавься от него.<br />
+14.4. Сокрытие делегирования.<br />
+14.4.1. Добавь в класс <strong><span class="text-corporate">User</span></strong> метод <mark>getBoss()</mark>.<br />
+14.4.2. Перепиши реализацию метода <mark>getBossName(User <strong>user</strong>)</mark> класса <span class="text-corporate"><strong>UserHelper</strong></span>.</p>
+
+<hr>
 <h3>Рефакторинг (13)</h3>
 <p>Разберись с кодом пакета <strong><span class="text-red">user</span></strong> (<em>пользователь</em>).<br />
 13.1. Извлечение метода. Добавь метод <mark>printInfo()</mark>, который будет выводить <strong>имя</strong> и <strong>фамилию</strong><br />
