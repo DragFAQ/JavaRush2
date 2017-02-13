@@ -1,4 +1,13 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big09">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big10">
+<h3>Рефакторинг (10)</h3>
+<p>Разберись с кодом в пакете <strong><span class="text-red">car</span></strong> (<em><strong>машина</strong></em>).<br />
+10.1. Замена конструктора фабричным методом.<br />
+10.1.1. Объяви классы <strong><span class="text-corporate">Truck</span></strong> (<strong>грузовик</strong>), <strong><span class="text-corporate">Sedan</span></strong> (<strong>седан</strong>) и <span class="text-corporate"><strong>Cabriolet</strong></span> (<strong>кабриолет</strong>), унаследованные от <strong><span class="text-corporate">Car</span></strong>.<br />
+10.1.2. Добавь в них конструкторы, принимающие <mark>int numberOfPassengers</mark>.<br />
+10.1.3. Добавь фабричный статический метод <mark>Car create(int type, int <strong>numberOfPassengers</strong>)</mark> в класс <strong><span class="text-corporate">Car</span></strong> и реализуй его.<br />
+10.1.4. Измени область видимости конструктора класса <span class="text-corporate"><strong>Car</strong></span>.</p>
+
+<hr>
 <h3>Рефакторинг (9)</h3>
 <p>9.1. Самоинкапсуляция поля. Перепиши метод <mark>incAverageGrade()</mark> используя <strong>сеттер</strong> и <strong>геттер</strong> для доступа к <mark class="green">averageGrade</mark>.<br />
 9.2. Замена поля-массива объектом. Замени массив <mark class="user">int[] size</mark> объектом нового типа <strong><span class="text-corporate">Size</span></strong>,<br />
