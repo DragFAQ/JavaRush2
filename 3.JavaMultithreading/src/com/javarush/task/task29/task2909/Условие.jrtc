@@ -1,4 +1,14 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big05">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big06">
+<h3>Рефакторинг (6)</h3>
+<p>6.1. Замена параметра набором специализированных методов. Замени метод <mark>setValue()</mark> класса<br />
+<span class="text-corporate"><strong>Student</strong></span> специализированными методами <mark>setCourse</mark> и <mark>setAverageGrade</mark>.<br />
+6.2. Добавление параметра. Добавить параметр с типом <span class="text-corporate">double</span> в метод <mark>getStudentWithAverageGrade()</mark>, чтобы было понятно с каким средним балом нужен студент.<br />
+Реализуй метод <mark>getStudentWithAverageGrade()</mark>.<br />
+6.3. Удаление параметра. Убери параметр из метода <mark>getStudentWithMaxAverageGrade()</mark>.<br />
+Реализуй этот метод, он должен возвращать студента с максимальным средним балом.<br />
+6.4. Разделение запроса и модификатора. Раздели метод <mark>getStudentWithMinAverageGradeAndExpel</mark> на <mark>Student getStudentWithMinAverageGrade()</mark> и <mark>void expel(Student <strong>student</strong>)</mark>. Первый метод должен возвратить студента с минимальным средним балом, а второй &#8212; отчислить переданного студента (<em>удалять из списка</em> <strong><span class="text-red">students</span></strong>).</p>
+
+<hr>
 <h3>Рефакторинг (5)</h3>
 <p>5.1. Создание шаблонного метода.<br />
 5.1.1. Добавь в класс <strong><span class="text-corporate">Human</span></strong> метод <mark>String getPosition()</mark>, который должен возвращать строку &#171;<em><strong>Человек</strong></em>&#171;.<br />
