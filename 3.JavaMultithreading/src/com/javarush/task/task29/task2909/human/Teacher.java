@@ -8,14 +8,15 @@ public class Teacher extends UniversityPerson {
         this.numberOfStudents = numberOfStudents;
     }
 
+    @Override
+    public String getPosition() {
+        return "Преподаватель";
+    }
+
     public void live() {
         teach();
     }
 
     public void teach() {
-    }
-
-    public void printData() {
-        System.out.println("Преподаватель: " + name);
     }
 }

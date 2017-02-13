@@ -23,6 +23,14 @@ public class Human implements Alive {
         return Collections.unmodifiableList(children);
     }
 
+    public String getPosition() {
+        return "Человек";
+    }
+
+    public void printData() {
+        System.out.println(getPosition() + ": " + name);
+    }
+
     public void addChild(Human human) {
         if (human != null)
             children.add(human);
