@@ -1,4 +1,18 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big03">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big04">
+<h3>Рефакторинг (4)</h3>
+<p>4.1. Замена наследования делегированием.<br />
+4.1.1. Класс <span class="text-corporate"><strong>University</strong></span> не должен наследоваться от <strong><span class="text-corporate">Student</span></strong>.<br />
+4.1.2. Класс <span class="text-corporate"><strong>University</strong></span> должен содержать список <strong><span class="text-red">students</span></strong>. Не забудь его инициализировать.<br />
+4.1.3. Добавь <strong>сеттер</strong> и <strong>геттер</strong> для <span class="text-red"><strong>students</strong></span>.<br />
+4.1.4. Университет имеет название (<mark class="user">name</mark>) и возраст (<mark class="user">age</mark>). Добавь необходимые поля, сеттеры и геттеры для них.<br />
+4.2. Извлечение суперкласса.<br />
+4.2.1. Создай класс <strong><span class="text-corporate">UniversityPerson</span></strong> в пакете <strong><span class="text-red">human</span></strong>.<br />
+4.2.2. Перенеси в него поле <mark class="user">university</mark>.<br />
+4.2.3. Перенеси <strong>сеттер</strong> и <strong>геттер</strong> для поля <mark class="user">university</mark>.<br />
+4.2.4. Унаследуй необходимые классы от <strong><span class="text-corporate">UniversityPerson</span></strong>.<br />
+4.3. Замена простого поля объектом. Измени тип поля <mark class="user">university</mark> на <span class="text-corporate"><strong>University</strong></span>.</p>
+
+<hr>
 <h3>Рефакторинг (3)</h3>
 <p>3.1. Спуск поля. Спусти поле <mark class="user">course</mark> в соответствующий класс. Сделай его <strong>приватным</strong>.<br />
 3.2. Спуск метода. Спусти <strong>геттер</strong> для поля <mark class="user">course</mark> в соответствующий класс.<br />
