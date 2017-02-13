@@ -1,4 +1,17 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big07">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big08">
+<h3>Рефакторинг (8)</h3>
+<p>8.1. Удаление сеттера. Удали метод <mark>setId()</mark>. Поле <mark class="user">id</mark> должно устанавливаться только в момент<br />
+создания объекта.<br />
+8.2. Сокрытие метода (<em><strong>поля</strong></em>). Изменить область видимости поля <mark class="user">nextId</mark> в соответствии с<br />
+областью его использования.<br />
+8.3. Замена исключения проверкой условия. Перепиши метод <mark>removeStudent(int <strong>index</strong>)</mark>, чтобы<br />
+он удалял студента из списка студентов только, если он там есть. Метод не должен кидать<br />
+исключение.<br />
+8.4. Удаление управляющего флага. Перепиши метод <mark>findDimaOrSasha()</mark>, сохранив логику его<br />
+работы. В методе не должны использоваться флаги типа <span class="text-corporate">found</span>, воспользуйся оператором<br />
+<mark>break</mark>.</p>
+
+<hr>
 <h3>Рефакторинг (7)</h3>
 <p>7.1. Параметризация метода. Замени методы <mark>incAverageGradeBy01()</mark> и <mark>incAverageGradeBy02()</mark><br />
 одним методом <mark>incAverageGrade(double <strong>delta</strong>)</mark>.<br />
