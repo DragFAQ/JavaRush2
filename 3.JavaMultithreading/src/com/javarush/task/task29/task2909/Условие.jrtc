@@ -1,4 +1,16 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big06">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big07">
+<h3>Рефакторинг (7)</h3>
+<p>7.1. Параметризация метода. Замени методы <mark>incAverageGradeBy01()</mark> и <mark>incAverageGradeBy02()</mark><br />
+одним методом <mark>incAverageGrade(double <strong>delta</strong>)</mark>.<br />
+7.2. Передача всего объекта. Перепиши метод <mark>addInfoAboutStudent()</mark>, чтобы он в качестве<br />
+параметра принимал объект типа <strong><span class="text-corporate">Student</span></strong>.<br />
+7.3. Замена параметра вызовом метода. Перепиши метод <mark>printInfoAboutStudent()</mark>, чтобы он не<br />
+требовал в качестве параметра имя студента, а получал его, вызвав соответствующий<br />
+метод у переданного объекта.<br />
+7.4. Замена параметров объектом. Перепиши методы <mark>setBeginningOfSession</mark> и <mark>setEndOfSession</mark>,<br />
+чтобы они вместо набора параметров принимали по одному объекту даты.</p>
+
+<hr>
 <h3>Рефакторинг (6)</h3>
 <p>6.1. Замена параметра набором специализированных методов. Замени метод <mark>setValue()</mark> класса<br />
 <span class="text-corporate"><strong>Student</strong></span> специализированными методами <mark>setCourse</mark> и <mark>setAverageGrade</mark>.<br />
