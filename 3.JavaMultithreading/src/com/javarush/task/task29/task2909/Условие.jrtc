@@ -1,4 +1,14 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big02">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big03">
+<h3>Рефакторинг (3)</h3>
+<p>3.1. Спуск поля. Спусти поле <mark class="user">course</mark> в соответствующий класс. Сделай его <strong>приватным</strong>.<br />
+3.2. Спуск метода. Спусти <strong>геттер</strong> для поля <mark class="user">course</mark> в соответствующий класс.<br />
+3.3. Извлечение интерфейса.<br />
+3.3.1. Создай интерфейс <strong><span class="text-yellow">Alive</span></strong> (<strong>живой</strong>) в пакете <strong><span class="text-red">human</span></strong>.<br />
+3.3.2. Интерфейс должен содержать метод жить <mark>live()</mark>.<br />
+3.3.3. Добавь интерфейс нужному классу.<br />
+3.4. Свертывание иерархии. Избавься от класса <strong><span class="text-corporate">Professor</span></strong>.</p>
+
+<hr>
 <h3>Рефакторинг (2)</h3>
 <p>2.1. Извлечение подкласса.<br />
 2.1.1. Добавь класс <strong><span class="text-corporate">Soldier</span></strong> в пакет <strong><span class="text-red">human</span></strong>.<br />
