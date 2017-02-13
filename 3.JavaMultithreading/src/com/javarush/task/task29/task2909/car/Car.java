@@ -40,9 +40,13 @@ public class Car {
         return result;
     }
 
-    public int fill(double numberOfLiters) {
+    public boolean isSummer(Date date , Date summerStart, Date summerEnd) {
+
+    }
+
+    public int fill(double numberOfLiters) throws Exception {
         if (numberOfLiters < 0)
-            return -1;
+            throw new Exception();
         fuel += numberOfLiters;
         return 0;
     }

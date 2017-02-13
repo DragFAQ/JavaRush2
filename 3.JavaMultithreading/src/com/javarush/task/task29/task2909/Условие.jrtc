@@ -1,4 +1,17 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big10">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big11">
+<h3>Рефакторинг (11)</h3>
+<p>11.1. Замена кода ошибки исключением. Перепиши метод заправиться <mark>fill(double</mark><br />
+<mark><strong> numberOfLiters</strong>)</mark>, чтобы он в случае ошибки кидал исключение <mark class="green">Exception</mark>.<br />
+11.2. Разбиение условного оператора.<br />
+11.2.1. Добавь и реализуй метод в классе <strong><span class="text-corporate">Car</span></strong>, определяющий относится ли переданная дата к<br />
+лету: <mark>boolean isSummer(Date <strong>date</strong> , Date <strong>summerStart</strong>, Date <strong>summerEnd</strong>)</mark>.<br />
+11.2.2. Добавь и реализуй метод, рассчитывающий расход топлива зимой: <mark>double</mark><br />
+<mark> getWinterConsumption(int <strong>length</strong>)</mark>.<br />
+11.2.3. Добавь и реализуй метод, рассчитывающий расход топлива летом: <mark>double</mark><br />
+<mark> getSummerConsumption(int <strong>length</strong>)</mark>.<br />
+11.2.4. Перепиши метод <mark>getTripConsumption()</mark>, используя новые методы.</p>
+
+<hr>
 <h3>Рефакторинг (10)</h3>
 <p>Разберись с кодом в пакете <strong><span class="text-red">car</span></strong> (<em><strong>машина</strong></em>).<br />
 10.1. Замена конструктора фабричным методом.<br />
