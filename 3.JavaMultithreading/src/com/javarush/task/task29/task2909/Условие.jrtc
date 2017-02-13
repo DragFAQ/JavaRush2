@@ -1,4 +1,21 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big11">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big12">
+<h3>Рефакторинг (12)</h3>
+<p>12.1. Объединение условных операторов.<br />
+12.1.1. Добавь внутренний метод, сообщающий, могут ли быть перевезены пассажиры<br />
+<mark>boolean canPassengersBeTransferred()</mark> в класс <span class="text-corporate"><strong>Car</strong></span>. Метод должен возвращать <span class="text-neon"><strong>true</strong></span>, если<br />
+водитель доступен <mark>isDriverAvailable</mark> и есть топливо <mark class="user">fuel</mark>.<br />
+12.1.2. Перепиши метод <mark>getNumberOfPassengersCanBeTransferred()</mark>, объединив условные<br />
+операторы (<em>используй метод</em> <mark>canPassengersBeTransferred()</mark>).<br />
+12.2. Объединение дублирующихся фрагментов в условных операторах. Перепиши метод<br />
+<mark>startMoving()</mark>, чтобы в нем не было повторяющихся вызовов функций.<br />
+12.3. Замена магического числа символьной константой. Замени магические числа в методе<br />
+<mark>getMaxSpeed()</mark> на константные переменные метода: <mark class="green">MAX_TRUCK_SPEED</mark>,<br />
+<mark class="green">MAX_SEDAN_SPEED</mark> и <mark class="green">MAX_CABRIOLET_SPEED</mark>.<br />
+12.4. Замена условного оператора полиморфизмом.<br />
+12.4.1. Переопредели метод <mark>getMaxSpeed()</mark> в подклассах, избавившись от условного оператора.<br />
+12.4.2. Метод <mark>getMaxSpeed()</mark> в классе <span class="text-corporate"><strong>Car</strong></span> сделай абстрактным.</p>
+
+<hr>
 <h3>Рефакторинг (11)</h3>
 <p>11.1. Замена кода ошибки исключением. Перепиши метод заправиться <mark>fill(double</mark><br />
 <mark><strong> numberOfLiters</strong>)</mark>, чтобы он в случае ошибки кидал исключение <mark class="green">Exception</mark>.<br />
