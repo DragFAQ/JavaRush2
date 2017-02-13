@@ -1,4 +1,19 @@
-<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big08">
+<div class="wdghtml" taskKey="com.javarush.task.task29.task2909.big09">
+<h3>Рефакторинг (9)</h3>
+<p>9.1. Самоинкапсуляция поля. Перепиши метод <mark>incAverageGrade()</mark> используя <strong>сеттер</strong> и <strong>геттер</strong> для доступа к <mark class="green">averageGrade</mark>.<br />
+9.2. Замена поля-массива объектом. Замени массив <mark class="user">int[] size</mark> объектом нового типа <strong><span class="text-corporate">Size</span></strong>,<br />
+содержащим публичные поля: рост <span class="text-corporate">int</span> <mark class="user">height</mark> и вес <span class="text-corporate">int</span> <mark class="user">weight</mark>. Публичный класс <strong><span class="text-corporate">Size</span></strong> объяви<br />
+внутри класса <strong><span class="text-corporate">Human</span></strong>.<br />
+9.3. Инкапсуляция поля. Сокрой поле company в классе <strong><span class="text-corporate">Worker</span></strong>. Добавь <strong>сеттер</strong> и <strong>геттер</strong> для него.<br />
+9.4. Замена кодирования типа классом.<br />
+9.4.1. Объяви публичный класс группы крови <strong><span class="text-corporate">BloodGroup</span></strong> внутри пакета <strong><span class="text-red">human</span></strong>.<br />
+9.4.2. Добавь в класс <strong><span class="text-corporate">BloodGroup</span></strong> приватное константное поле <span class="text-corporate">int</span> <mark class="user">code</mark>, приватный конструктор,<br />
+принимающий <span class="text-corporate">int</span> и инициализирующий поле <mark class="user">code</mark>, <strong>геттер</strong> для поля класса.<br />
+9.4.3. Добавь в класс <strong><span class="text-corporate">BloodGroup</span></strong> статические методы <mark>first()</mark>, <mark>second()</mark>, <mark>third()</mark> и <mark>fourth()</mark>,<br />
+создающие и возвращающие объекты типа BloodGroup с правильным кодом внутри (<strong>1</strong>, <strong>2</strong>, <strong>3</strong> и <strong>4</strong> соответственно).<br />
+9.4.4. Примени в классе <span class="text-corporate"><strong>Human</strong></span> новый тип <strong><span class="text-corporate">BloodGroup</span></strong>.</p>
+
+<hr>
 <h3>Рефакторинг (8)</h3>
 <p>8.1. Удаление сеттера. Удали метод <mark>setId()</mark>. Поле <mark class="user">id</mark> должно устанавливаться только в момент<br />
 создания объекта.<br />
