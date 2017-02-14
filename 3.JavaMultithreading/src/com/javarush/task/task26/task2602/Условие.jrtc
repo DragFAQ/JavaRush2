@@ -1,0 +1,6 @@
+<div class="wdghtml" taskKey="com.javarush.task.task26.task2602">
+<h3>Был бы ум - будет и успех</h3>
+<p>Солдаты всегда строились, строятся и будут строиться по убыванию роста.<br />
+<strong>Отсортируй</strong> солдат, предварительно подумав, что лучше использовать при таких условиях &#8212; <strong><span class="text-user">Comparable</span></strong> или <strong><span class="text-user">Comparator</span></strong>.</p>
+
+</div>
