@@ -8,6 +8,8 @@ public class Solution {
     int var2;
     int var3;
     int var4;
+    private final static Object sync1 = new Object();
+    private final static Object sync2 = new Object();
 
     public Solution(int var1, int var2, int var3, int var4) {
         this.var1 = var1;
@@ -17,11 +19,15 @@ public class Solution {
     }
 
     public int getSumOfVar1AndVar2() {
-        return var1 + var2;
+        synchronized (sync1) {
+            return var1 + var2;
+        }
     }
 
     public int getSumOfVar3AndVar4() {
-        return var3 + var4;
+        synchronized (sync2) {
+            return var3 + var4;
+        }
     }
 
     public static void main(String[] args) {
