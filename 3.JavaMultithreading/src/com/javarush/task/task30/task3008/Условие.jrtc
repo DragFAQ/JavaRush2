@@ -1,0 +1,15 @@
+<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big01">
+<h3>Чат (1)</h3>
+<p>Сегодня мы напишем чат. Набор программ с помощью которого можно будет<br />
+обмениваться текстовыми сообщения. Набор будет состоять из одного сервера и<br />
+нескольких клиентов, по одному для каждого участника чата.</p>
+<p>Начнем с сервера. Нам понадобятся такие классы:<br />
+1) <span class="text-corporate"><strong>Server</strong></span> – основной класс сервера.<br />
+2) <span class="text-corporate"><strong>MessageType</strong></span> – <strong>enum</strong>, который отвечает за тип сообщений пересылаемых между<br />
+клиентом и сервером.<br />
+3) <span class="text-corporate"><strong>Message</strong></span> – класс, отвечающий за пересылаемые сообщения.<br />
+4) <strong><span class="text-corporate">Connection</span></strong> – класс соединения между клиентом и сервером.<br />
+5) <span class="text-corporate"><strong>ConsoleHelper</strong></span> – вспомогательный класс, для чтения или записи в консоль.</p>
+<p>Создай эти классы и добавь метод <mark>main</mark> в класс <strong><span class="text-corporate">Server</span></strong>.</p>
+
+</div>
