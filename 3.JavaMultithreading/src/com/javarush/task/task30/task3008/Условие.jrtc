@@ -1,4 +1,39 @@
-<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big04">
+<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big05">
+<h3>Чат (5)</h3>
+<p>Клиент и сервер будут общаться через сокетное соединение. Одна сторона будет<br />
+записывать данные в сокет, а другая читать. Их общение представляет собой обмен<br />
+сообщениями <span class="text-corporate"><strong>Message</strong></span>. Класс <strong><span class="text-corporate">Connection</span></strong> будет выполнять роль обертки над классом<br />
+<strong>java.net.Socket</strong>, которая должна будет уметь сериализовать и десериализовать объекты<br />
+типа <strong><span class="text-corporate">Message</span></strong> в сокет. Методы этого класса должны быть готовы к вызову из разных<br />
+потоков.</p>
+<p><strong>Добавь в класс Connection:</strong><br />
+1) <mark class="user">Final</mark> поля:<br />
+а) <strong><span class="text-corporate">Socket</span></strong> <mark class="user">socket</mark><br />
+б) <strong><span class="text-corporate">ObjectOutputStream</span></strong> <mark class="user">out</mark><br />
+в) <strong><span class="text-corporate">ObjectInputStream</span></strong> <mark class="user">in</mark><br />
+2) Конструктор, который должен принимать <strong><span class="text-corporate">Socket</span></strong> в качестве параметра и<br />
+инициализировать поля класса. Для инициализации полей <mark class="user">in</mark> и <mark class="user">out</mark> используй<br />
+соответствующие потоки сокета. Конструктор может бросать исключение <span class="text-corporate">IOException</span>.<br />
+Создать объект класса <strong><span class="text-corporate">ObjectOutputStream</span></strong> нужно до того, как будет создаваться объект<br />
+класса ObjectInputStream, иначе может возникнуть взаимная блокировка потоков,<br />
+которые хотят установить соединение через класс <strong><span class="text-corporate">Connection</span></strong>. Более подробно об этом<br />
+ты можешь прочитать в спецификации класса <strong><span class="text-corporate">ObjectInputStream</span></strong>.<br />
+3) Метод <mark>void send(Message <strong>message</strong>) throws IOException</mark>. Он должен записывать<br />
+(сериализовать) сообщение <mark class="green">message</mark> в <mark class="green">ObjectOutputStream</mark>. Этот метод будет<br />
+вызываться из нескольких потоков. Позаботься, чтобы запись в объект<br />
+<mark class="green">ObjectOutputStream</mark> была возможна только одним потоком в определенный момент<br />
+времени, остальные желающие ждали завершения записи. При этом другие методы<br />
+класса Connection не должны быть заблокированы.<br />
+4) Метод <mark>Message receive() throws IOException</mark>, <mark>ClassNotFoundException</mark>. Он должен читать<br />
+(десериализовать) данные из <mark class="green">ObjectInputStream</mark>. Сделай так, чтобы операция чтения<br />
+не могла быть одновременно вызвана несколькими потоками, при этом вызов других<br />
+методы класса <strong><span class="text-corporate">Connection</span></strong> не блокировать.<br />
+5) Метод <mark>SocketAddress getRemoteSocketAddress()</mark>, возвращающий удаленный адрес<br />
+сокетного соединения.<br />
+6) Метод <mark>void close() throws IOException</mark>, который должен закрывать все ресурсы класса.</p>
+<p>Класс <strong><span class="text-corporate">Connection</span></strong> должен поддерживать интерфейс <strong><span class="text-yellow">Closeable</span></strong>.</p>
+
+<hr>
 <h3>Чат (4)</h3>
 <p>Сообщение <span class="text-corporate"><strong>Message</strong></span> – это данные, которые одна сторона отправляет, а вторая принимает.<br />
 Каждое сообщение должно иметь тип <strong><span class="text-corporate">MessageType</span></strong>, а некоторые и дополнительные<br />
