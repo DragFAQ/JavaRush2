@@ -1,4 +1,19 @@
-<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big06">
+<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big07">
+<h3>Чат (7)</h3>
+<p>Т.к. сервер может одновременно работать с несколькими клиентами, нам понадобится<br />
+метод для отправки сообщения сразу всем.</p>
+<p><strong>Добавь в класс Server:</strong><br />
+1. Статическое поле <span class="text-red"><strong>Map</strong>&lt;String, Connection&gt;</span> <strong><span class="text-red">connectionMap</span></strong>, где ключом будет имя<br />
+клиента, а значением &#8212; соединение с ним.<br />
+2. Инициализацию поля из <strong>п.7.1</strong> с помощью подходящего <strong>Map</strong> из библиотеки<br />
+<strong>java.util.concurrent</strong>, т.к. работа с этим полем будет происходить из разных потоков и<br />
+нужно обеспечить потокобезопасность.<br />
+3. Статический метод <mark>void sendBroadcastMessage(Message <strong>message</strong>)</mark>, который должен<br />
+отправлять сообщение message всем соединениям из <strong>connectionMap</strong>. Если при<br />
+отправке сообщение произойдет исключение <strong>IOException</strong>, нужно отловить его и<br />
+сообщить пользователю, что не смогли отправить сообщение.</p>
+
+<hr>
 <h3>Чат (6)</h3>
 <p>Приступим к самому важному – написанию класса Server. Сервер должен поддерживать</p>
 <p>множество соединений с разными клиентами одновременно. Это можно реализовать с</p>
@@ -120,19 +135,5 @@
 <em><strong> при попытке ввода числа. Попробуйте еще раз.&#187;</strong></em> И повторить ввод числа.</p>
 <p>В этой задаче и далее, если не указано дополнительно другого, то все поля класса должны<br />
 быть приватными, а методы публичными.</p>
-
-<hr>
-<h3>Чат (1)</h3>
-<p>Сегодня мы напишем чат. Набор программ с помощью которого можно будет<br />
-обмениваться текстовыми сообщения. Набор будет состоять из одного сервера и<br />
-нескольких клиентов, по одному для каждого участника чата.</p>
-<p>Начнем с сервера. Нам понадобятся такие классы:<br />
-1) <span class="text-corporate"><strong>Server</strong></span> – основной класс сервера.<br />
-2) <span class="text-corporate"><strong>MessageType</strong></span> – <strong>enum</strong>, который отвечает за тип сообщений пересылаемых между<br />
-клиентом и сервером.<br />
-3) <span class="text-corporate"><strong>Message</strong></span> – класс, отвечающий за пересылаемые сообщения.<br />
-4) <strong><span class="text-corporate">Connection</span></strong> – класс соединения между клиентом и сервером.<br />
-5) <span class="text-corporate"><strong>ConsoleHelper</strong></span> – вспомогательный класс, для чтения или записи в консоль.</p>
-<p>Создай эти классы и добавь метод <mark>main</mark> в класс <strong><span class="text-corporate">Server</span></strong>.</p>
 
 </div>
