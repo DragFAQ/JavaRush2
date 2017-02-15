@@ -1,4 +1,21 @@
-<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big03">
+<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big04">
+<h3>Чат (4)</h3>
+<p>Сообщение <span class="text-corporate"><strong>Message</strong></span> – это данные, которые одна сторона отправляет, а вторая принимает.<br />
+Каждое сообщение должно иметь тип <strong><span class="text-corporate">MessageType</span></strong>, а некоторые и дополнительные<br />
+данные, например, текстовое сообщение должно содержать текст. Т.к. сообщения будут<br />
+создаваться в одной программе, а читаться в другой, удобно воспользоваться механизмом<br />
+сериализации для перевода класса в последовательность битов и наоборот.</p>
+<p><strong>Добавь в класс <span class="text-corporate">Message</span>:</strong><br />
+1) Поддержку интерфейса <strong><span class="text-yellow">Serializable</span></strong>.<br />
+2) <mark class="user">final</mark> поле типа <span class="text-corporate"><strong>MessageType type</strong></span>, которое будет содержать тип сообщения.<br />
+3) <mark class="user">final</mark> поле типа <strong><span class="text-corporate">String data</span></strong>, которое будет содержать данные сообщения.<br />
+4) <strong>Геттеры</strong> для этих полей.<br />
+5) Конструктор, принимающий только <strong><span class="text-corporate">MessageType</span></strong>, он должен проинициализировать<br />
+поле <mark class="user">type</mark> переданным параметром, а поле <mark class="user">data</mark> оставить равным <strong><span class="text-neon">null</span></strong>.<br />
+6) Конструктор, принимающий <strong><span class="text-corporate">MessageType</span></strong> <span class="text-corporate"><strong>type</strong></span> и <span class="text-corporate"><strong>String data</strong></span>. Он должен также<br />
+инициализировать все поля класса.</p>
+
+<hr>
 <h3>Чат (3)</h3>
 <p>Прежде, чем двигаться дальше, нужно разработать протокол общения клиента и сервера.</p>
 <p><strong>Сформулируем основные моменты протокола:</strong><br />
