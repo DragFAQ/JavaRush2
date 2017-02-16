@@ -1,0 +1,10 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2708">
+<h3>Убираем deadLock используя открытые вызовы</h3>
+<p>Синхронизированные методы, которые вызывают внутри себя синхронизированные методы других классов, приводят к <strong><span class="text-neon">dead-lock-у</span></strong>.<br />
+1. <em><strong>Перенесите синхронизацию с метода в синхронизированный блок</strong></em>, куда поместите лишь необходимые части кода.<br />
+2. <em><strong>Уберите избыточную синхронизацию</strong></em> методов.<br />
+3. В стеке вызова методов <em><strong>не должно быть перекрестной синхронизации</strong></em>, т.е. такого <mark>synchronizedMethodAClass().synchronizedMethodBClass().synchronizedMethodAClass()</mark></p>
+<p>Этот способ избавления от дэдлока называется &#171;<em><strong>открытые вызовы</strong></em>&#171;, о нем читайте в дополнительном материале к лекции.<br />
+Метод <mark>main</mark> не участвует в тестировании.</p>
+
+</div>

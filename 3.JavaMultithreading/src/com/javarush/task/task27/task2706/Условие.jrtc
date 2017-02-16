@@ -1,0 +1,8 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2706">
+<h3>Убираем deadlock</h3>
+<p>Используя стратегию избегания <strong><span class="text-neon">deadlock</span></strong>-а сделай так, чтобы он не возник.<br />
+Метод <mark>main</mark> не участвует в тестировании.<br />
+Действуй аналогично примеру из лекций.<br />
+Изменения вноси только в <mark>safeMethod</mark>.</p>
+
+</div>
