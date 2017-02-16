@@ -1,0 +1,5 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2705">
+<h3>Второй вариант deadlock</h3>
+<p>В методе <mark>secondMethod</mark> расставь <strong><span class="text-neon">synchronized</span></strong> блоки так, чтобы при использовании класса <strong><span class="text-corporate">Solution</span></strong> нитями образовывался <strong><span class="text-neon">deadlock</span></strong>.</p>
+
+</div>

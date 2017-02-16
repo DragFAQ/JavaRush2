@@ -1,0 +1,6 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2703">
+<h3>Создаем deadlock</h3>
+<p>Расставь модификаторы так, чтобы при работе с этим кодом появился <strong><span class="text-neon">deadlock</span></strong>.<br />
+Метод <mark>main</mark> порождает <span class="text-neon"><strong>deadlock</strong></span>, поэтому не участвует в тестировании.</p>
+
+</div>
