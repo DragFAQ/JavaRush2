@@ -15,14 +15,14 @@ public class Solution {
             return this.name;
         }
 
-        public void bow(Friend bower) {
+        public synchronized void bow(Friend bower) {
             System.out.format("%s: %s"
                             + " has bowed to me!%n",
                     this.name, bower.getName());
             bower.bowBack(this);
         }
 
-        public void bowBack(Friend bower) {
+        public synchronized void bowBack(Friend bower) {
             System.out.format("%s: %s"
                             + " has bowed back to me!%n",
                     this.name, bower.getName());
@@ -36,12 +36,20 @@ public class Solution {
                 new Friend("Gaston");
         new Thread(new Runnable() {
             public void run() {
-                alphonse.bow(gaston);
+                synchronized (alphonse) {
+                    synchronized (gaston) {
+                        alphonse.bow(gaston);
+                    }
+                }
             }
         }).start();
         new Thread(new Runnable() {
             public void run() {
-                gaston.bow(alphonse);
+                synchronized (gaston) {
+                    synchronized (alphonse) {
+                        gaston.bow(alphonse);
+                    }
+                }
             }
         }).start();
     }
