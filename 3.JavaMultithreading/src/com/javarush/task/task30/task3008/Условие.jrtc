@@ -1,4 +1,20 @@
-<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big07">
+<div class="wdghtml" taskKey="com.javarush.task.task30.task3008.big08">
+<h3>Чат (8)</h3>
+<p>Класс <strong><span class="text-corporate">Handler</span></strong> должен реализовывать протокол общения с клиентом.<br />
+Выделим из протокола отдельные этапы и реализуем их с помощью отдельных методов:</p>
+<p><strong>Этап первый</strong> – это этап рукопожатия (знакомства сервера с клиентом). Реализуем его с<br />
+помощью приватного метода <mark>String serverHandshake(Connection connection) throws IOException</mark>, <strong><span class="text-corporate">ClassNotFoundException</span></strong>. Метод в качестве параметра принимает соединение connection, а возвращает имя нового клиента.</p>
+<p><strong>Реализация метода должна:</strong><br />
+1) <strong>Сформировать</strong> и <strong>отправить</strong> команду запроса имени пользователя<br />
+2) <strong>Получить</strong> <strong>ответ</strong> клиента<br />
+3) <strong>Проверить</strong>, что получена команда с именем пользователя<br />
+4) <strong>Достать</strong> из ответа <strong>имя</strong>, <strong>проверить</strong>, что оно не пустое и пользователь с таким именем еще не подключен (используй <mark>connectionMap</mark>)<br />
+5) <strong>Добавить</strong> <strong>нового</strong> <strong>пользователя</strong> и <strong>соединение</strong> с ним в <mark>connectionMap</mark><br />
+6) <strong>Отправить</strong> <strong>клиенту</strong> команду информирующую, что его имя принято<br />
+7) Если какая-то <strong>проверка</strong> не прошла, <strong>заново</strong> запросить имя клиента<br />
+8) <strong>Вернуть</strong> принятое <strong>имя</strong> в качестве возвращаемого значения</p>
+
+<hr>
 <h3>Чат (7)</h3>
 <p>Т.к. сервер может одновременно работать с несколькими клиентами, нам понадобится<br />
 метод для отправки сообщения сразу всем.</p>
@@ -115,25 +131,5 @@
 4) <mark class="green">TEXT</mark> – текстовое сообщение.<br />
 5) <mark class="green">USER_ADDED</mark> – пользователь добавлен.<br />
 6) <mark class="green">USER_REMOVED</mark> – пользователь удален.</p>
-
-<hr>
-<h3>Чат (2)</h3>
-<p>Первым делом, для удобства работы с консолью реализуем класс <span class="text-corporate"><strong>ConsoleHelper</strong></span>. В<br />
-дальнейшем, вся работа с консолью должна происходить через этот класс.</p>
-<p><strong>Добавь в него:</strong><br />
-1. Статическое поле типа <span class="text-corporate">BufferedReader</span>, инициализированное с помощью <mark>System.in</mark>.<br />
-2. Статический метод <mark>writeMessage(String <strong>message</strong>)</mark>, который должен выводить<br />
-сообщение message в консоль.<br />
-3. Статический метод <mark>String readString()</mark>, который должен считывать строку с<br />
-консоли. Если во время чтения произошло исключение, вывести пользователю<br />
-сообщение &#171;<em><strong>Произошла ошибка при попытке ввода текста. Попробуйте еще раз.</strong></em>&#187; И<br />
-повторить ввод. Метод не должен пробрасывать исключения IOException наружу.<br />
-Другие исключения не должны обрабатываться.<br />
-4. Статический метод <mark>int readInt()</mark>. Он должен возвращать введенное число и<br />
-использовать метод <mark>readString()</mark>. Внутри метода обработать исключение<br />
-<strong><span class="text-corporate">NumberFormatException</span></strong>. Если оно произошло вывести сообщение &#171;<em><strong>Произошла ошибка</strong></em><br />
-<em><strong> при попытке ввода числа. Попробуйте еще раз.&#187;</strong></em> И повторить ввод числа.</p>
-<p>В этой задаче и далее, если не указано дополнительно другого, то все поля класса должны<br />
-быть приватными, а методы публичными.</p>
 
 </div>

@@ -43,5 +43,31 @@ public class Server {
         public Handler(Socket socket) {
             this.socket = socket;
         }
+
+        private String serverHandshake(Connection connection) throws IOException, ClassNotFoundException {
+            String result = null;
+            boolean success = false;
+
+            while (!success) {
+                connection.send(new Message(MessageType.NAME_REQUEST));
+                Message response = connection.receive();
+                if (response.getType() == MessageType.USER_NAME) {
+                    result = connection.receive().getData();
+                    //result != null &&
+                        if (!result.equals("")) {
+                            if (!connectionMap.containsKey(result)) {
+                                connectionMap.put(result, connection);
+
+                                connection.send(new Message(MessageType.NAME_ACCEPTED));
+
+                                success = true;
+                            }
+                        }
+                    }
+                }
+
+
+            return result;
+        }
     }
 }
