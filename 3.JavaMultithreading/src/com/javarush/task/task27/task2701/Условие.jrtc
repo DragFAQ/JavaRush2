@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2701">
+<h3>Избавляемся от меток</h3>
+<p>Избавьтесь от меток в методе <mark>isSubstringPresent</mark> сохранив логику.<br />
+Метод возвращает <strong><span class="text-neon">true</span></strong>, в случае если строка <span class="text-corporate">substring</span> является подстрокой строки <span class="text-corporate">string</span>, иначе <span class="text-neon"><strong>false</strong></span>.<br />
+В коде должны отсутствовать операторы <mark>break</mark> и <mark>continue</mark>.</p>
+
+</div>
