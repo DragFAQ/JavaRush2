@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2711">
+<h3>CountDownLatch</h3>
+<p>Дана стандартная реализация методологии <strong><span class="text-neon">wait-notify</span></strong>.<br />
+Почитай про <mark>CountDownLatch</mark> и перепиши тело метода <mark>someMethod</mark> используя поле <mark class="user">latch</mark>.<br />
+Весь лишний код удали из класса.</p>
+
+</div>

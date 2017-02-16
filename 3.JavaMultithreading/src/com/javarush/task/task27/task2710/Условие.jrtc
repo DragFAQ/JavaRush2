@@ -1,0 +1,7 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2710">
+<h3>Расставьте wait-notify</h3>
+<p>Расставь <strong><span class="text-neon">wait-notify</span></strong>.</p>
+<p><strong>Пример вывода:</strong><br />
+<code>Thread-0 MailServer has got: [Person [Thread-1] has written an email 'AAA'] in 1001 ms after start</code></p>
+
+</div>

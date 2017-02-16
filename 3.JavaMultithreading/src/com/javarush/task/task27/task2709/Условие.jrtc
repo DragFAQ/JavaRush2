@@ -1,0 +1,19 @@
+<div class="wdghtml" taskKey="com.javarush.task.task27.task2709">
+<h3>Producer–consumer</h3>
+<p>В классе <strong><span class="text-corporate">TransferObject</span></strong> расставь вызовы методов <mark>wait</mark>/<mark>notify</mark>/<mark>notifyAll</mark>, чтобы обеспечить последовательное создание и получение объекта.<br />
+В методах <mark>run</mark> классов <strong><span class="text-corporate">ConsumerTask</span></strong> и <strong><span class="text-corporate">ProducerTask</span></strong> создай необходимые <strong><span class="text-neon">synchronized</span></strong> блоки.</p>
+<p><strong>Ожидаемый вывод:</strong><br />
+<code>...</code><br />
+<code> Put: M<br />
+Got: M<br />
+Put: N<br />
+Got: N<br />
+Put: K<br />
+Got: K<br />
+...</code><br />
+где <mark class="user">M</mark>, <mark class="user">N</mark>, <mark class="user">K</mark> &#8212; числа<br />
+Метод <mark>main</mark> не участвует в тестировании</p>
+<p><strong>P.S.</strong> <em>Всегда старайся использовать concurrent коллекции вместо ручной реализации </em><mark>wait</mark>/<mark>notify</mark>/<mark>notifyAll</mark><em>.</em><br />
+Задачи подобные этой позволяют лучше понять основы работы многопоточных приложений.</p>
+
+</div>
