@@ -19,7 +19,7 @@ public class Solution {
 
     public static boolean isNormalLockOrder(final Solution solution, final Object o1, final Object o2) throws Exception {
         //do something here
-        return false;
+        return o1.toString().compareTo(o2.toString()) < 0;
     }
 
     public static void main(String[] args) throws Exception {

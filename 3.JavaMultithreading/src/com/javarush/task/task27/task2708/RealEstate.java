@@ -25,15 +25,19 @@ public class RealEstate {
         return allApartments;
     }
 
-    public synchronized void up(Apartment apartment) {
-        activeApartments.add(apartment);
+    public void up(Apartment apartment) {
+        synchronized (activeApartments) {
+            activeApartments.add(apartment);
+        }
     }
 
-    public synchronized void revalidate() {
+    public void revalidate() {
         activeApartments.clear();
         for (Apartment apartment : allApartments) {
             boolean randomValue = Math.random() * 2 % 2 == 0;
-            apartment.revalidate(randomValue);
+            synchronized (activeApartments) {
+                apartment.revalidate(randomValue);
+            }
         }
     }
 }
