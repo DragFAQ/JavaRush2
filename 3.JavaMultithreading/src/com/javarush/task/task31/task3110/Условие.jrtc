@@ -1,0 +1,28 @@
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big01">
+<h3>Archiver (1)</h3>
+<p>Давай напишем архиватор. <strong>Архиватор</strong>, как минимум, должен уметь архивировать и разархивировать<br />
+файлы.</p>
+<p><strong>Начнем с первого.</strong><br />
+Нам потребуется менеджер архива. Он будет совершать операции над файлом архива (<em>файлом, который будет храниться на диске и иметь расширение <strong>zip</strong></em>). Класс, который будет этим заниматься, назовем <strong><span class="text-corporate">ZipFileManager</span></strong>. А главный класс приложения “<em><strong>Архиватор</strong></em>” будет называться <span class="text-corporate"><strong>Archiver</strong></span>.<br />
+В программировании и не только, есть понятие полного (<em>абсолютного</em>) и относительного пути. Для начала, разберемся что-же такое путь вообще. Путь (<em>англ. Path</em>) – это набор символов, который показывает, где в операционной системе находится какой-то файл или папка.<br />
+Полный или абсолютный путь – это путь, начинающийся с корневой директории. В операционной системе <em><strong>Windows</strong></em>, корневой директорией принято считать диск.<br />
+Пример полного пути в Windows: <em>C:userzipsTest1.zip</em>.<br />
+<strong>Относительный путь</strong> – это путь относительно какой-то директории. <em><strong>zipsTest1.zip</strong></em> &#8212; это пример<br />
+относительного пути файла <em><strong>Test1.zip</strong></em> относительно директории (<em>папки</em>) <strong><em>C:user</em></strong>. Относительный путь,<br />
+относительно директории <em><strong>C:userzips</strong></em> будет просто <em><strong>Test1.zip</strong></em> и совпадать с именем файла.<br />
+Обрати внимание, что по умолчанию, и полный, и относительный путь к файлу, включают в себя имя<br />
+файла.<br />
+1. Создай класс менеджер <strong><span class="text-corporate">ZipFileManager</span></strong><br />
+2. Добавь в класс приватную переменную <span class="text-corporate"><strong>Path</strong></span> <mark class="user">zipFile</mark>. В ней мы будем хранить полный путь к архиву, с которым будем работать.<br />
+3. Добавь конструктор <mark>ZipFileManager(Path <strong>zipFile</strong>)</mark>. Проинициализируй поле класса <mark class="user">zipFile</mark>.<br />
+4. Объяви публичный метод <mark>createZip(Path <strong>source</strong>) throws Exception</mark>, пока с пустой реализацией.<br />
+<span class="text-corporate"><strong>Path</strong></span> <mark class="user">source</mark> – это путь к чему-то, что мы будем архивировать.<br />
+5. Создай класс <strong><span class="text-corporate">Archiver</span></strong> и добавь в него метод <mark>main</mark>.<br />
+6. В методе <mark>main</mark>:<br />
+6.1 Запроси пользователя ввести полный путь архива с клавиатуры. Не забудь, что имя тоже входит в состав полного пути.<br />
+6.2 Создай объект класса <strong><span class="text-corporate">ZipFileManager</span></strong>, передав в него имя файла архива. Разберись, как из <span class="text-corporate">String</span> получить <strong><span class="text-corporate">Path</span></strong>.</p>
+<p><strong>Подсказка:</strong> <em>изучи метод </em><mark>get()</mark><em> класса </em><strong><span class="text-corporate">Paths</span></strong><em>.</em></p>
+<p>6.3 Запроси пользователя ввести путь к файлу, который будем архивировать. Не путай это с файлом архива, который мы уже ввели. На этот раз нам нужен файл, который мы будем сжимать, а не в котором хранить сжатые данные.<br />
+6.4 Вызови метод <mark>createZip</mark> у объекта <strong><span class="text-corporate">ZipFileManager</span></strong>, передав в него путь для архивации.</p>
+
+</div>
