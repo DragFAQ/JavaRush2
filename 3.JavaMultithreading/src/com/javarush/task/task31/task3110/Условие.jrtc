@@ -1,4 +1,20 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big03">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big04">
+<h3>Archiver (4)</h3>
+<p>Каждая команда подразумевает выполнение каких-то действий. Создадим интерфейс <strong><span class="text-corporate">Command</span></strong>, с<br />
+методом <mark>execute()</mark> (<strong>execute</strong> – «<em>выполнить» по-английски</em>). Для каждой команды мы создадим свой собственный класс. Все классы команд должны реализовывать (<em>быть унаследованы</em>) интерфейс <span class="text-corporate text-yellow"><strong>Command</strong></span>.<br />
+Так как команд будет много, отведем для них отдельный пакет command. Все интерфейсы и реализации команд будем хранить именно в нем.<br />
+Самая простая команда &#8212; это выход <mark class="green">EXIT</mark>, с нее и начнем.<br />
+1. Создай пакет <strong><span class="text-red">command</span></strong><br />
+2. В нем объявить интерфейс <strong><span class="text-yellow">Command</span></strong><br />
+3. Добавь метод <mark>void execute() throws Exception</mark> в интерфейс <strong><span class="text-yellow">Command</span></strong><br />
+4. Объяви класс <strong><span class="text-corporate">ExitCommand</span></strong>, реализующий интерфейс <strong><span class="text-yellow">Command</span></strong><br />
+5. Реализуй метод <mark>execute()</mark> в классе <strong><span class="text-corporate">ExitCommand</span></strong>, он должен выводить “<em>До встречи!</em>” с помощью<br />
+метода из класса <strong><span class="text-corporate">ConsoleHelper</span></strong><br />
+6. В самом конце метода <mark>main</mark> в класса <strong><span class="text-corporate">Archiver</span></strong> добавь код, который создает объект типа <strong><span class="text-corporate">ExitCommand</span></strong> и вызывает у него метод <mark>execute()</mark><br />
+7. Попробуй, как это все работает<br />
+Обрати внимание, что все файлы проекта должны быть в кодировке <strong>UTF-8</strong>. Кодировку в <strong>IntelliJ IDEA</strong> можно задать через пункты меню <span class="text-neon">Settings -&gt; Editor -&gt; File Encodings</span>. Проверь, что все три поля отвечающие за кодировку выставлены в <strong>UTF-8</strong>.</p>
+
+<hr>
 <h3>Archiver (3)</h3>
 <p>Как видишь, архивировать оказалось не так уж и сложно. Но наш архиватор получился каким-то уж<br />
 слишком примитивным. Настоящий архиватор должен уметь гораздо больше: <strong><em>распаковку архива,</em></strong><br />
