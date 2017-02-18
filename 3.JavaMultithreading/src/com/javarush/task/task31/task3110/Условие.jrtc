@@ -1,4 +1,28 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big02">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big03">
+<h3>Archiver (3)</h3>
+<p>Как видишь, архивировать оказалось не так уж и сложно. Но наш архиватор получился каким-то уж<br />
+слишком примитивным. Настоящий архиватор должен уметь гораздо больше: <strong><em>распаковку архива,</em></strong><br />
+<strong><em> добавление нового файла в существующий архив, удаление файла из архива, просмотр содержимого</em></strong><br />
+<strong><em> архива</em></strong>. Сейчас мы будем улучшать наш архиватор. А для этого придется написать несколько новых<br />
+классов. Сначала давай создадим enum Operation, который будет содержать все команды, которые<br />
+поддерживает наш архиватор.<br />
+Так же было бы удобно использовать <strong><span class="text-corporate">ConsoleHelper</span></strong> для работы с консолью, чтобы все что касается<br />
+консоли было собрано в одном классе. В дальнейшем, если не указано обратного, то весь ввод и вывод должен происходить через <strong><span class="text-corporate">ConsoleHelper</span></strong>.</p>
+<p>1. Объяви <span class="text-corporate">enum</span><strong><span class="text-corporate"> Operation</span></strong>, в него добавить команды:<br />
+1.1. Создать архив <mark class="green">CREATE</mark><br />
+1.2. Добавить файл в архив <mark class="green">ADD</mark><br />
+1.3. Удалить файл из архива <mark class="green">REMOVE</mark><br />
+1.4. Извлечь содержимое архива <mark class="green">EXTRACT</mark><br />
+1.5. Просмотреть содержимое архива <mark class="green">CONTENT</mark><br />
+1.6. Выйти из программы <mark class="green">EXIT</mark><br />
+2. Создай класс <strong><span class="text-corporate">ConsoleHelper</span></strong> и реализуй в нем статические публичные методы:<br />
+2.1. Вывести сообщение в консоль <mark>void writeMessage(String <strong>message</strong>)</mark><br />
+2.2. Прочитать строку с консоли <mark>String readString()</mark><br />
+2.3. Прочитать число с консоли <mark>int readInt()</mark><br />
+Методы чтения с консоли могут бросать исключение <strong><span class="text-yellow">IOException</span></strong> в случае ошибки ввода, учти<br />
+это при их объявлении.</p>
+
+<hr>
 <h3>Archiver (2)</h3>
 <p>Сейчас мы напишем реализацию метода <mark>createZip(Path <strong>source</strong>)</mark>, в котором мы будем архивировать файл, заданный переменной source.<br />
 В <strong>Java</strong> есть специальный класс <span class="text-corporate"><strong>ZipOutputStream</strong></span> из пакета <em><strong>java.util.zip</strong></em>, который сжимает (<em>архивирует</em>)<br />
