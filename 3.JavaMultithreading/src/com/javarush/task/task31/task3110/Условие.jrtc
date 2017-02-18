@@ -1,4 +1,25 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big08">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big09">
+<h3>Archiver (9)</h3>
+<p>Теперь займемся другой, не менее важной частью нашего архиватора. Очень часто пользователь хочет<br />
+создать архив не из одного файла, а из целой папки. Тогда архивация сводится к поочередному<br />
+добавлению элемента <strong><span class="text-corporate">ZipEntry</span></strong> для каждого файла в архив.<br />
+Нам нужно написать класс <strong><span class="text-corporate">FileManager</span></strong> для получения списка всех файлов в какой-то папке. У него должен быть конструктор, который будет принимать путь <span class="text-corporate"><strong>Path</strong></span> <mark class="user">rootPath</mark>, указывающий на корень (<em>папку, файлы в которой нас интересуют</em>) и метод <mark>List&lt;Path&gt; getFileList()</mark>, который должен возвращать список относительных путей всех файлов, которые находятся по пути <mark class="user">rootPath</mark>, включая файлы в подпапках.<br />
+Директория, в которой будем искать, может задаваться только один раз в конструкторе. Поэтому, прямо в конструкторе мы сразу можем сформировать список файлов (их относительных путей), сохранив его в переменную класса <span class="text-corporate">List</span><span class="text-corporate">&lt;Path&gt;</span><strong><span class="text-corporate"> fileList</span></strong>.<br />
+Осталось только решить, как нам собрать все файлы, даже те, которые могут быть в папке, которая в папке, которая в папке, которая в интересующей нас папке. Фух, чуть не вошел рекурсию. Хотя нам-то она и поможет! Сделаем метод <mark>collectFileList(Path <strong>path</strong>)</mark>, который будет складывать в переменную класса fileList все файлы, обнаруженные внутри переданного пути path, вызывая сам себя для всех объектов, в обнаруженных директориях.</p>
+<p>1. Создай класс <span class="text-corporate"><strong>FileManager</strong></span> с конструктором <mark>FileManager(Path <strong>rootPath</strong>) throws IOException</mark><br />
+2. Объяви и проинициализируй приватные переменные класса:<br />
+2.1. <span class="text-corporate">Path <mark class="user">rootPath</mark></span> – корневой путь директории, файлы которой нас интересуют<br />
+2.2. <span class="text-red">List&lt;Path&gt; <strong>fileList</strong></span> – список относительных путей файлов внутри <mark class="user">rootPath</mark><br />
+3. Создай <strong>геттер</strong> для <mark class="user">fileList</mark><br />
+4. Реализуй метод <mark>void collectFileList(Path path) throws IOException</mark>, который должен:<br />
+4.1. Проверить, если переданный путь path является обычным файлом (<em>используй метод </em><mark>Files.isRegularFile</mark>), то получить его относительный путь относительно rootPath и добавить его в список <mark class="user">fileList</mark>.<br />
+4.2. Если переданный путь <mark class="user">path</mark>, является директорией (<em>узнать это поможет метод </em><mark>Files.isDirectory</mark>), то пройтись по всему содержимому директории и вызвать <mark>collectFileList(Path <strong>path</strong>)</mark>, передав в <mark class="user">path</mark> обнаруженные элементы.<br />
+Пройтись по всему содержимому директории можно предварительно получив <mark>DirectoryStream</mark> с помощью метода <mark>newDirectoryStream</mark> класса <span class="text-corporate"><strong>Files</strong></span>. Не забудь закрыть созданный <strong><span class="text-corporate">DirectoryStream</span></strong>.<br />
+5. Добавь вызов метода <mark>collectFileList(<strong>rootPath</strong>)</mark> в конструкторе <strong><span class="text-corporate">FileManager</span></strong>.<br />
+6. Примени все свои знания об инкапсуляции к этому классу.<br />
+Выполняя это задание, ты написал алгоритм, который обходит дерево файлов. Но в <strong>Java</strong> есть специальный интерфейс <strong><span class="text-yellow">FileVisitor</span></strong> для этих целей. Очень рекомендую разобраться как им пользоваться.</p>
+
+<hr>
 <h3>Archiver (8)</h3>
 <p>Чтобы узнать какую команду сейчас хочет выполнить пользователь, добавим метод <mark>Operation</mark><br />
 <mark> askOperation()</mark> в класс <strong><span class="text-corporate">Archiver</span></strong>. Этот метод должен вывести в консоль список доступных команд и<br />
@@ -77,29 +98,5 @@
 6. В самом конце метода <mark>main</mark> в класса <strong><span class="text-corporate">Archiver</span></strong> добавь код, который создает объект типа <strong><span class="text-corporate">ExitCommand</span></strong> и вызывает у него метод <mark>execute()</mark><br />
 7. Попробуй, как это все работает<br />
 Обрати внимание, что все файлы проекта должны быть в кодировке <strong>UTF-8</strong>. Кодировку в <strong>IntelliJ IDEA</strong> можно задать через пункты меню <span class="text-neon">Settings -&gt; Editor -&gt; File Encodings</span>. Проверь, что все три поля отвечающие за кодировку выставлены в <strong>UTF-8</strong>.</p>
-
-<hr>
-<h3>Archiver (3)</h3>
-<p>Как видишь, архивировать оказалось не так уж и сложно. Но наш архиватор получился каким-то уж<br />
-слишком примитивным. Настоящий архиватор должен уметь гораздо больше: <strong><em>распаковку архива,</em></strong><br />
-<strong><em> добавление нового файла в существующий архив, удаление файла из архива, просмотр содержимого</em></strong><br />
-<strong><em> архива</em></strong>. Сейчас мы будем улучшать наш архиватор. А для этого придется написать несколько новых<br />
-классов. Сначала давай создадим enum Operation, который будет содержать все команды, которые<br />
-поддерживает наш архиватор.<br />
-Так же было бы удобно использовать <strong><span class="text-corporate">ConsoleHelper</span></strong> для работы с консолью, чтобы все что касается<br />
-консоли было собрано в одном классе. В дальнейшем, если не указано обратного, то весь ввод и вывод должен происходить через <strong><span class="text-corporate">ConsoleHelper</span></strong>.</p>
-<p>1. Объяви <span class="text-corporate">enum</span><strong><span class="text-corporate"> Operation</span></strong>, в него добавить команды:<br />
-1.1. Создать архив <mark class="green">CREATE</mark><br />
-1.2. Добавить файл в архив <mark class="green">ADD</mark><br />
-1.3. Удалить файл из архива <mark class="green">REMOVE</mark><br />
-1.4. Извлечь содержимое архива <mark class="green">EXTRACT</mark><br />
-1.5. Просмотреть содержимое архива <mark class="green">CONTENT</mark><br />
-1.6. Выйти из программы <mark class="green">EXIT</mark><br />
-2. Создай класс <strong><span class="text-corporate">ConsoleHelper</span></strong> и реализуй в нем статические публичные методы:<br />
-2.1. Вывести сообщение в консоль <mark>void writeMessage(String <strong>message</strong>)</mark><br />
-2.2. Прочитать строку с консоли <mark>String readString()</mark><br />
-2.3. Прочитать число с консоли <mark>int readInt()</mark><br />
-Методы чтения с консоли могут бросать исключение <strong><span class="text-yellow">IOException</span></strong> в случае ошибки ввода, учти<br />
-это при их объявлении.</p>
 
 </div>
