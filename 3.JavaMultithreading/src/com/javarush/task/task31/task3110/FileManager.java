@@ -1,5 +1,6 @@
 package com.javarush.task.task31.task3110;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,6 +22,9 @@ public class FileManager {
 
     public void collectFileList(Path path) throws IOException {
         if (Files.isRegularFile(path))
-            path.
+            fileList.add(rootPath.relativize(path));
+        else if (Files.isDirectory(path))
+            for (File fileEntry : path.toFile().listFiles())
+                collectFileList(fileEntry.toPath());
     }
 }
