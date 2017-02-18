@@ -1,4 +1,31 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big09">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big10">
+<h3>Archiver (10)</h3>
+<p>Пришло время отрефакторить класс <strong><span class="text-corporate">ZipFileManager</span></strong>. В методе <mark>createZip</mark> есть код, который нам также понадобится в методах, которые будут добавлять или удалять файл в архив, распаковывать его и т.д. Эти методы мы будем реализовывать позже, но уже сейчас можем вынести общие части кода в отдельные методы.<br />
+Кроме того, метод <mark>createZip</mark> мог создавать архив только из одного файла, а хотелось бы уметь<br />
+архивировать всю папку целиком. Создавать отдельный метод для этого не будем, т.к. в <mark>createZip(<strong>Patsource</strong>)</mark> можно передавать и директорию и обычный файл.</p>
+<p><strong>Задания на сегодня:</strong><br />
+1. Реализуй приватный метод <mark>void addNewZipEntry(ZipOutputStream zipOutputStream, Path filePath, Path fileName) throws Exception</mark> в классе <strong><span class="text-corporate">ZipFileManager</span></strong>.<br />
+<strong>Он должен:</strong><br />
+1.1. Создавать <strong><span class="text-corporate">InputStream</span></strong>, для файла с именем <mark class="user">fileName</mark>, расположенным в<br />
+директории <mark class="user">filePath</mark><br />
+1.2. Создавать новый элемент архива <strong><span class="text-corporate">ZipEntry</span></strong>, в качестве имени используй <strong><span class="text-corporate">fileName</span>,</strong> преобразовав его в <span class="text-corporate">String</span><br />
+1.3. Копировать данные из <strong><span class="text-corporate">InputStream</span></strong> (<em>из п.1.1</em>) в переданный <strong><span class="text-corporate">zipOutputStream</span></strong><br />
+1.4. Закрывать элемент архива<br />
+1.5. Закрывать <span class="text-corporate"><strong>InputStream</strong></span>, сделай это с помощью <strong><span class="text-neon">try-with-resources</span></strong><br />
+2. Замени часть кода метода <mark>createZip</mark> вызовом нового метода <mark>addNewZipEntry</mark>. Передай значение <mark>source.getParent()</mark> в параметр <strong><span class="text-corporate">filePath</span></strong>, а <mark>source.getFileName()</mark> в <span class="text-corporate"><strong>filename</strong></span>.<br />
+3. Реализуй приватный метод <mark>void copyData(InputStream in, OutputStream out) throws Exception</mark>. Он должен читать данные из <strong>in</strong> и записывать в <strong>out</strong>, пока не вычитает все.<br />
+4. Замени часть кода метода <mark>addNewZipEntry</mark> на вызов метода <mark>copyData</mark><br />
+5. Вернемся к <strong><span class="text-corporate">createZip</span></strong>:<br />
+5.1. В начале метода проверь, что существует директория (<mark>zipFile.getParent()</mark>), в которой мы<br />
+будем создавать <span class="text-corporate"><strong>zipFile</strong></span>, если ее нет, то создай ее.<br />
+5.2. Если source является обычным файлом (<em>для проверки используй</em> <strong><span class="text-corporate">Files.isRegularFile</span></strong>), то оставим просто вызов <span class="text-corporate"><strong>addNewZipEntry</strong></span><br />
+5.3. Если source является директорией (<em>для проверки используй</em> <span class="text-corporate"><strong>Files.isDirectory</strong></span>), то:<br />
+5.3.1. Создай объект класса файловый менеджер <strong><span class="text-corporate">FileManager</span></strong>, в конструктор передадим <strong><span class="text-neon">source</span></strong><br />
+5.3.2. Получи список файлов у файлового менеджера, сохраним его в переменную <span class="text-corporate"><strong>fileNames</strong></span><br />
+5.3.3. Для всех элементов <span class="text-corporate"><strong>fileNames</strong></span>, вызови метод <mark>addNewZipEntry(zipOutputStream, source, fileName)</mark><br />
+5.4. Если <span class="text-neon"><strong>source</strong></span> не является ни папкой, ни файлом, то кинь исключение <strong><span class="text-yellow">PathIsNotFoundException</span></strong>.</p>
+
+<hr>
 <h3>Archiver (9)</h3>
 <p>Теперь займемся другой, не менее важной частью нашего архиватора. Очень часто пользователь хочет<br />
 создать архив не из одного файла, а из целой папки. Тогда архивация сводится к поочередному<br />
@@ -82,21 +109,5 @@
 2.3. Команда распаковки архива – <span class="text-corporate"><strong>class ZipExtractCommand</strong></span><br />
 2.4. Команда добавления файла в архив – <span class="text-corporate"><strong>class ZipAddCommand</strong></span><br />
 2.5. Команда удаления файла из архива – <strong><span class="text-corporate">class ZipRemoveCommand</span></strong></p>
-
-<hr>
-<h3>Archiver (4)</h3>
-<p>Каждая команда подразумевает выполнение каких-то действий. Создадим интерфейс <strong><span class="text-corporate">Command</span></strong>, с<br />
-методом <mark>execute()</mark> (<strong>execute</strong> – «<em>выполнить» по-английски</em>). Для каждой команды мы создадим свой собственный класс. Все классы команд должны реализовывать (<em>быть унаследованы</em>) интерфейс <span class="text-corporate text-yellow"><strong>Command</strong></span>.<br />
-Так как команд будет много, отведем для них отдельный пакет command. Все интерфейсы и реализации команд будем хранить именно в нем.<br />
-Самая простая команда &#8212; это выход <mark class="green">EXIT</mark>, с нее и начнем.<br />
-1. Создай пакет <strong><span class="text-red">command</span></strong><br />
-2. В нем объявить интерфейс <strong><span class="text-yellow">Command</span></strong><br />
-3. Добавь метод <mark>void execute() throws Exception</mark> в интерфейс <strong><span class="text-yellow">Command</span></strong><br />
-4. Объяви класс <strong><span class="text-corporate">ExitCommand</span></strong>, реализующий интерфейс <strong><span class="text-yellow">Command</span></strong><br />
-5. Реализуй метод <mark>execute()</mark> в классе <strong><span class="text-corporate">ExitCommand</span></strong>, он должен выводить “<em>До встречи!</em>” с помощью<br />
-метода из класса <strong><span class="text-corporate">ConsoleHelper</span></strong><br />
-6. В самом конце метода <mark>main</mark> в класса <strong><span class="text-corporate">Archiver</span></strong> добавь код, который создает объект типа <strong><span class="text-corporate">ExitCommand</span></strong> и вызывает у него метод <mark>execute()</mark><br />
-7. Попробуй, как это все работает<br />
-Обрати внимание, что все файлы проекта должны быть в кодировке <strong>UTF-8</strong>. Кодировку в <strong>IntelliJ IDEA</strong> можно задать через пункты меню <span class="text-neon">Settings -&gt; Editor -&gt; File Encodings</span>. Проверь, что все три поля отвечающие за кодировку выставлены в <strong>UTF-8</strong>.</p>
 
 </div>
