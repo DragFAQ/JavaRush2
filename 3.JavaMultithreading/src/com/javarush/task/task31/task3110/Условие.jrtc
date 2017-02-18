@@ -1,4 +1,16 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big04">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big05">
+<h3>Archiver (5)</h3>
+<p><strong> Разделим команды на два типа</strong>: те, которые работают непосредственно с архивом и вспомогательные<br />
+(например <mark class="green">EXIT</mark>). Все команды первого типа, будут иметь общий функционал, его удобно вынести в какой-то их общий базовый класс. Назовем этот класс <span class="text-corporate"><strong>ZipCommand</strong></span>. Он, как и все классы команд, должен реализовывать интерфейс <strong><span class="text-yellow">Command</span></strong>. Все команды, которые работают с архивом, должны быть унаследованы от класса <span class="text-corporate"><strong>ZipCommand</strong></span>. Мы не будем создавать объекты класса <span class="text-corporate"><strong>ZipCommand</strong></span>, поэтому сделаем его абстрактным.</p>
+<p>1. Создай абстрактный класс <span class="text-corporate"><strong>ZipCommand</strong></span>, реализующий интерфейс <strong><span class="text-yellow">Command</span></strong><br />
+2. Создай по одному классу для каждой команды. Все перечисленные команды должны быть унаследованы от <strong><span class="text-corporate">ZipCommand</span></strong> и содержать пустую реализацию метода <mark>execute()</mark>, его реализацию мы будем писать для каждой команды отдельно по мере реализации нашего архиватора.<br />
+2.1. Команда создания архива (<em>упаковки файлов в архив</em>) – <strong><span class="text-corporate">class ZipCreateCommand</span></strong><br />
+2.2. Команда просмотра содержимого архива – <strong><span class="text-corporate">class ZipContentCommand</span></strong><br />
+2.3. Команда распаковки архива – <span class="text-corporate"><strong>class ZipExtractCommand</strong></span><br />
+2.4. Команда добавления файла в архив – <span class="text-corporate"><strong>class ZipAddCommand</strong></span><br />
+2.5. Команда удаления файла из архива – <strong><span class="text-corporate">class ZipRemoveCommand</span></strong></p>
+
+<hr>
 <h3>Archiver (4)</h3>
 <p>Каждая команда подразумевает выполнение каких-то действий. Создадим интерфейс <strong><span class="text-corporate">Command</span></strong>, с<br />
 методом <mark>execute()</mark> (<strong>execute</strong> – «<em>выполнить» по-английски</em>). Для каждой команды мы создадим свой собственный класс. Все классы команд должны реализовывать (<em>быть унаследованы</em>) интерфейс <span class="text-corporate text-yellow"><strong>Command</strong></span>.<br />
