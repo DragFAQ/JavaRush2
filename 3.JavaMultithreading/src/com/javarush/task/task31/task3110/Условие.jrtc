@@ -1,4 +1,45 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big06">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big08">
+<h3>Archiver (8)</h3>
+<p>Чтобы узнать какую команду сейчас хочет выполнить пользователь, добавим метод <mark>Operation</mark><br />
+<mark> askOperation()</mark> в класс <strong><span class="text-corporate">Archiver</span></strong>. Этот метод должен вывести в консоль список доступных команд и<br />
+попросить выбрать одну из них. Для удобства будем просить ввести номер команды, где номер – это<br />
+порядковый номер команды в <span class="text-corporate">enum <strong>Operation</strong></span>. Получить порядковый номер значения в <span class="text-corporate">enum’е</span> можно с помощью метода <mark>ordinal()</mark>.<br />
+Теперь все готово чтобы переписать main, используя последние достижения науки и техники, а именно<br />
+класс <strong><span class="text-corporate">CommandExecutor</span></strong> и метод <mark>askOperation()</mark>.<br />
+1. Добавь публичный статический метод <mark>Operation askOperation() throws IOException в класс Archiver</mark>.<br />
+<strong>Он должен:</strong><br />
+1.1. Использовать методы класса <span class="text-corporate"><strong>ConsoleHelper</strong></span><br />
+1.2. Запрашивать у пользователя номер операции, которую он хочет совершить.</p>
+<p><strong>Подсказка:</strong><br />
+<em>чтобы вывести номер операции «Создать архив», используй: </em><mark>Operation.CREATE.ordinal()</mark></p>
+<p>1.3. Возвращать выбранную операцию.</p>
+<p><strong>Пример вывода метода askOperation():</strong><br />
+<code>Выберите операцию:<br />
+0 - упаковать файлы в архив<br />
+1 - добавить файл в архив<br />
+2 - удалить файл из архива<br />
+3 - распаковать архив<br />
+4 - просмотреть содержимое архива<br />
+5 – выход</code><br />
+2. Перепиши метод <mark>main()</mark>:<br />
+2.1. Объяви локальную переменную типа <mark class="user">Operation</mark><br />
+2.2. В цикле запрашивай новое значение для переменной <strong>п.2.1.</strong> с помощью метода <mark>askOperation()</mark> и вызывай выполнение операции с помощью <mark>CommandExecutor.execute()</mark><br />
+2.3. Обеспечь выход из цикла, если пользователь выбрал операцию <mark>Operation.EXIT</mark><br />
+2.4. Оберни вызов <mark>askOperation()</mark> и <mark>execute(operation)</mark> в блок <span class="text-neon"><strong>try-catch</strong></span>. Если произойдет исключение <strong><span class="text-yellow">WrongZipFileException</span></strong> выведи сообщение &#171;<em>Вы не выбрали файл архива или выбрали неверный файл.</em>&#187; с помощью <mark>ConsoleHelper</mark>, при любых других исключениях выводи &#171;<em>Произошла ошибка. Проверьте введенные данные.&#187;</em>.<br />
+2.5. Проследи, чтобы программа продолжила свою работу (<em>перешла на новый шаг цикла</em>), после обработки исключений.<br />
+3. Запусти программу и проверь, что команда “<em>выход</em>” работает.</p>
+
+<hr>
+<h3>Archiver (7)</h3>
+<p>Мы много всего сделали и можно немного передохнуть.<br />
+Создадим, пакет exception и добавим в него два класса <span class="text-corporate"><strong>PathIsNotFoundException</strong></span> и <strong><span class="text-corporate">WrongZipFileException</span></strong>.<br />
+Исключение <strong><span class="text-yellow">PathIsNotFoundException</span></strong> будем кидать, если не сможем найти путь, в который нужно распаковать архив, или путь к файлу, который хотим запаковать, или любой другой путь. Исключение <strong><span class="text-yellow">WrongZipFileException</span></strong> будем кидать, если будет попытка сделать что-нибудь с архивом, который не<br />
+существует.</p>
+<p>1. Создай пакет <strong><span class="text-red">exception</span></strong><br />
+2. Добавь в него класс <strong><span class="text-corporate">PathIsNotFoundException</span></strong> унаследованный от <strong><span class="text-corporate">Exception</span></strong><br />
+3. Добавь класс <span class="text-corporate"><strong>WrongZipFileException</strong></span>, также унаследованный от <span class="text-corporate"><strong>Exception</strong></span></p>
+
+<hr>
 <h3>Archiver (6)</h3>
 <p>Представь, что пользователь сообщает нам с помощью переменной <span class="text-corporate"><strong>Operation</strong></span> <mark class="user">operation</mark>, что он хочет сделать. Тогда мы должны проверить значение этой переменной, создать объект соответствующего класса команды и вызвать у него метод execute(). Чтобы не создавать объект класса нужной команды каждый раз, его нужно где-то хранить. Создадим для этих целей класс <strong><span class="text-corporate">CommandExecutor</span></strong>, пусть у него будет открытым только один публичный статический метод <mark>execute(Operation <strong>operation</strong>)</mark>, который найдет нужную команду и вызовет у нее метод execute.</p>
 <p>1. Создай класс <strong><span class="text-corporate">CommandExecutor</span></strong>. Он должен быть в корне задачи, не стоит добавлять его в пакет <strong><span class="text-red">command</span></strong><br />
@@ -60,49 +101,5 @@
 2.3. Прочитать число с консоли <mark>int readInt()</mark><br />
 Методы чтения с консоли могут бросать исключение <strong><span class="text-yellow">IOException</span></strong> в случае ошибки ввода, учти<br />
 это при их объявлении.</p>
-
-<hr>
-<h3>Archiver (2)</h3>
-<p>Сейчас мы напишем реализацию метода <mark>createZip(Path <strong>source</strong>)</mark>, в котором мы будем архивировать файл, заданный переменной source.<br />
-В <strong>Java</strong> есть специальный класс <span class="text-corporate"><strong>ZipOutputStream</strong></span> из пакета <em><strong>java.util.zip</strong></em>, который сжимает (<em>архивирует</em>)<br />
-переданные в него данные. Чтобы несколько файлов, сжимаемые в один архив, не слиплись вместе, для каждого из них создается специальная сущность – элемент архива <strong><span class="text-corporate">ZipEntry</span></strong>. Т.е. в <span class="text-corporate"><strong>ZipOutputStream</strong></span> мы сначала кладем <strong><span class="text-corporate">ZipEntry</span></strong>, а затем уже записываем содержимое файла. При записи файл автоматически сжимается, а при чтении – автоматически восстанавливается. <strong><span class="text-corporate">ZipEntry</span></strong> может быть не только файлом, но и папкой.</p>
-<p><strong>Чтобы заархивировать файл (<em>создать новый архив и добавить в него файл</em>):</strong><br />
-1. Создай новый поток архива <strong><span class="text-corporate">ZipOutputStream</span></strong> используя переменную класса <span class="text-corporate"><strong>zipFile</strong></span>, с помощью метода <mark>newOutputStream</mark> класса <strong><span class="text-corporate">Files</span></strong>.<br />
-2. Создай новый элемент архива <strong><span class="text-corporate">ZipEntry</span></strong>. В конструктор <strong><span class="text-corporate">ZipEntry</span></strong> передай строку, содержащую имя новой записи. Имя нужно получить из полного пути source, взять только имя файла и сконвертировать его в <span class="text-corporate">String</span>.<br />
-3. Добавь в поток архива созданный элемент архива.<br />
-4. Перепиши данные из файла, который архивируем в поток архива. <strong>Для этого:</strong><br />
-4.1. Создай поток <span class="text-corporate"><strong>InputStream</strong></span> для добавляемого файла <strong><span class="text-neon">source</span></strong>, используя метод <mark>newInputStream</mark> класса <strong><span class="text-corporate">Files</span></strong><br />
-4.2. Сделай цикл, который будет читать данные из <strong><span class="text-corporate">InputStream</span></strong> (<em>созданного в п.4.1</em>), пока они там есть и записывать их в <strong><span class="text-corporate">ZipOutputStream</span></strong> (<em>созданный в п.1</em>)<br />
-4.3. Закрой <strong><span class="text-corporate">InputStream</span></strong>, сделай это с помощью <strong><span class="text-neon">try-with-resource</span><span class="text-neon">s</span></strong><br />
-5. Закрой элемент архива у потока архива<br />
-6. Закрой поток архива, сделай это также с помощью <strong><span class="text-neon">try-with-resources</span></strong><br />
-7. Запусти программу и проверь, что файл архивируется</p>
-
-<hr>
-<h3>Archiver (1)</h3>
-<p>Давай напишем архиватор. <strong>Архиватор</strong>, как минимум, должен уметь архивировать и разархивировать<br />
-файлы.</p>
-<p><strong>Начнем с первого.</strong><br />
-Нам потребуется менеджер архива. Он будет совершать операции над файлом архива (<em>файлом, который будет храниться на диске и иметь расширение <strong>zip</strong></em>). Класс, который будет этим заниматься, назовем <strong><span class="text-corporate">ZipFileManager</span></strong>. А главный класс приложения “<em><strong>Архиватор</strong></em>” будет называться <span class="text-corporate"><strong>Archiver</strong></span>.<br />
-В программировании и не только, есть понятие полного (<em>абсолютного</em>) и относительного пути. Для начала, разберемся что-же такое путь вообще. Путь (<em>англ. Path</em>) – это набор символов, который показывает, где в операционной системе находится какой-то файл или папка.<br />
-Полный или абсолютный путь – это путь, начинающийся с корневой директории. В операционной системе <em><strong>Windows</strong></em>, корневой директорией принято считать диск.<br />
-Пример полного пути в Windows: <em>C:userzipsTest1.zip</em>.<br />
-<strong>Относительный путь</strong> – это путь относительно какой-то директории. <em><strong>zipsTest1.zip</strong></em> &#8212; это пример<br />
-относительного пути файла <em><strong>Test1.zip</strong></em> относительно директории (<em>папки</em>) <strong><em>C:user</em></strong>. Относительный путь,<br />
-относительно директории <em><strong>C:userzips</strong></em> будет просто <em><strong>Test1.zip</strong></em> и совпадать с именем файла.<br />
-Обрати внимание, что по умолчанию, и полный, и относительный путь к файлу, включают в себя имя<br />
-файла.<br />
-1. Создай класс менеджер <strong><span class="text-corporate">ZipFileManager</span></strong><br />
-2. Добавь в класс приватную переменную <span class="text-corporate"><strong>Path</strong></span> <mark class="user">zipFile</mark>. В ней мы будем хранить полный путь к архиву, с которым будем работать.<br />
-3. Добавь конструктор <mark>ZipFileManager(Path <strong>zipFile</strong>)</mark>. Проинициализируй поле класса <mark class="user">zipFile</mark>.<br />
-4. Объяви публичный метод <mark>createZip(Path <strong>source</strong>) throws Exception</mark>, пока с пустой реализацией.<br />
-<span class="text-corporate"><strong>Path</strong></span> <mark class="user">source</mark> – это путь к чему-то, что мы будем архивировать.<br />
-5. Создай класс <strong><span class="text-corporate">Archiver</span></strong> и добавь в него метод <mark>main</mark>.<br />
-6. В методе <mark>main</mark>:<br />
-6.1 Запроси пользователя ввести полный путь архива с клавиатуры. Не забудь, что имя тоже входит в состав полного пути.<br />
-6.2 Создай объект класса <strong><span class="text-corporate">ZipFileManager</span></strong>, передав в него имя файла архива. Разберись, как из <span class="text-corporate">String</span> получить <strong><span class="text-corporate">Path</span></strong>.</p>
-<p><strong>Подсказка:</strong> <em>изучи метод </em><mark>get()</mark><em> класса </em><strong><span class="text-corporate">Paths</span></strong><em>.</em></p>
-<p>6.3 Запроси пользователя ввести путь к файлу, который будем архивировать. Не путай это с файлом архива, который мы уже ввели. На этот раз нам нужен файл, который мы будем сжимать, а не в котором хранить сжатые данные.<br />
-6.4 Вызови метод <mark>createZip</mark> у объекта <strong><span class="text-corporate">ZipFileManager</span></strong>, передав в него путь для архивации.</p>
 
 </div>
