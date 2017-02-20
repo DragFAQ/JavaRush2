@@ -1,4 +1,19 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big12">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big13">
+<h3>Archiver (13)</h3>
+<p>Продолжим наш путь к получению содержимого файла архива. Напишем метод <mark>getFilesList()</mark> в классе <span class="text-corporate"><strong>ZipFileManager</strong></span>. Он будет возвращать список файлов в архиве, вернее список свойств этих файлов (<em>класс свойств </em><strong><span class="text-corporate">FileProperties</span></strong><em> мы уже реализовали</em>).<br />
+<strong>Итак:</strong><br />
+1. Добавь метод <mark>List&lt;FileProperties&gt; getFilesList() throws Exception</mark> в класс <span class="text-corporate"><strong>ZipFileManager</strong></span><br />
+2. Внутри метода проверь является ли содержимое <span class="text-corporate"><strong>zipFile</strong></span> обычным файлом с помощью подходящего метода класса <span class="text-corporate"><strong>Files</strong></span>. Если это не файл, брось исключение <mark>WrongZipFileException(</mark>).<br />
+3. Создай список с элементами типа <span class="text-corporate"><strong>FileProperties</strong></span>, в него мы будем складывать свойства файлов<br />
+4. Создай входящий поток <strong><span class="text-corporate">ZipInputStream</span></strong>, для файла из переменной <span class="text-corporate"><strong>zipFile</strong></span>. Как и в прошлые разы, оберни его создание в <strong><span class="text-neon">try-with-resources</span></strong><br />
+5. Пройдись по всем элементам <span class="text-corporate"><strong>ZipEntry</strong></span> потока <span class="text-corporate"><strong>ZipInputStream</strong></span><br />
+6. Для каждого элемента <span class="text-corporate"><strong>ZipEntry</strong></span> вычитай его содержимое, иначе у нас не будет информации о его размере. Нельзя узнать размер файла в архиве, не вычитав его. Это очень легко сделать с помощью функции copyData, используя временный буфер типа <strong><span class="text-corporate">ByteArrayOutputStream</span></strong>.<br />
+7. Получи имя, размер, сжатый размер и метод сжатия элемента архива. Посмотри, что еще можно узнать о нем.<br />
+8. Создай объект класса <span class="text-corporate"><strong>FileProperties</strong></span>, используя полученные данные о файле.<br />
+9. Добавь созданный объект из <strong>п.8</strong> в список из <strong>п.3</strong><br />
+10. После выхода из цикла верни собранную информацию вызвавшему методу.</p>
+
+<hr>
 <h3>Archiver (12)</h3>
 <p>Сегодня мы подготовимся к реализации команды <mark>ZipContentCommand</mark>. Она будет заниматься получением содержимого архива. Содержимое архива – это упакованные файлы и папки, но нам было бы интересно узнать не только имена объектов архива, но и их размер до и после сжатия, степень сжатия и метод сжатия.<br />
 Создадим класс <strong><span class="text-corporate">FileProperties</span></strong>, который будет отвечать за свойства каждого файла в архиве. Свойства – это набор, состоящий из: имя файла, размер файла до и после сжатия, метод сжатия.<br />
@@ -115,15 +130,5 @@
 2.4. Оберни вызов <mark>askOperation()</mark> и <mark>execute(operation)</mark> в блок <span class="text-neon"><strong>try-catch</strong></span>. Если произойдет исключение <strong><span class="text-yellow">WrongZipFileException</span></strong> выведи сообщение &#171;<em>Вы не выбрали файл архива или выбрали неверный файл.</em>&#187; с помощью <mark>ConsoleHelper</mark>, при любых других исключениях выводи &#171;<em>Произошла ошибка. Проверьте введенные данные.&#187;</em>.<br />
 2.5. Проследи, чтобы программа продолжила свою работу (<em>перешла на новый шаг цикла</em>), после обработки исключений.<br />
 3. Запусти программу и проверь, что команда “<em>выход</em>” работает.</p>
-
-<hr>
-<h3>Archiver (7)</h3>
-<p>Мы много всего сделали и можно немного передохнуть.<br />
-Создадим, пакет exception и добавим в него два класса <span class="text-corporate"><strong>PathIsNotFoundException</strong></span> и <strong><span class="text-corporate">WrongZipFileException</span></strong>.<br />
-Исключение <strong><span class="text-yellow">PathIsNotFoundException</span></strong> будем кидать, если не сможем найти путь, в который нужно распаковать архив, или путь к файлу, который хотим запаковать, или любой другой путь. Исключение <strong><span class="text-yellow">WrongZipFileException</span></strong> будем кидать, если будет попытка сделать что-нибудь с архивом, который не<br />
-существует.</p>
-<p>1. Создай пакет <strong><span class="text-red">exception</span></strong><br />
-2. Добавь в него класс <strong><span class="text-corporate">PathIsNotFoundException</span></strong> унаследованный от <strong><span class="text-corporate">Exception</span></strong><br />
-3. Добавь класс <span class="text-corporate"><strong>WrongZipFileException</strong></span>, также унаследованный от <span class="text-corporate"><strong>Exception</strong></span></p>
 
 </div>
