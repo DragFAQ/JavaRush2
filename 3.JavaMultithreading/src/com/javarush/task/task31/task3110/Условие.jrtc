@@ -1,4 +1,24 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big10">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big11">
+<h3>Archiver (11)</h3>
+<p>Давай наконец попробуем нормально реализовать метод <mark>execute()</mark> класса <span class="text-corporate"><strong>ZipCreateCommand</strong></span>, который мы добавляли раньше.</p>
+<p><strong>Для этого нужно:</strong><br />
+1. В начале метода добавить вывод сообщения &#171;<em>Создание архива.</em>&#187; Не забудь, что мы работаем с консолью через методы класса <span class="text-corporate"><strong>ConsoleHelper</strong></span>.<br />
+2. Создай новый объект класса <span class="text-corporate"><strong>ZipFileManager</strong></span>. Т.к. создание этого объекта будет необходимо и другим командам, вынеси создание в отдельный метод <mark>ZipFileManager getZipFileManager() throws Exception</mark> в класс <span class="text-corporate"><strong>ZipCommand</strong></span>.<br />
+<strong>Этот метод должен:</strong><br />
+2.1. Просить пользователя ввести полный путь файла архива<br />
+2.2. Считывать введенный путь в переменную типа <span class="text-corporate">String</span><br />
+2.3. Используя введенный <span class="text-corporate">String</span> формировать путь <span class="text-corporate"><strong>Path</strong></span><br />
+2.4. Создать объект <span class="text-corporate"><strong>ZipFileManager</strong></span>, передав в конструктор полученный путь<br />
+2.5. Вернуть созданный объект<br />
+3. Попроси пользователя ввести полное имя файла или директории для архивации<br />
+4. Создай путь <span class="text-corporate"><strong>Path</strong></span>, используя введенную строку<br />
+5. У объекта класса <span class="text-corporate"><strong>ZipFileManager</strong></span> вызови метод <mark>createZip()</mark>, передав в него путь из п.4<br />
+6. Выведи в консоль сообщение &#171;<em>Архив создан.</em>&#187;<br />
+7. Оберни содержимое метода <mark>execute()</mark> класса <span class="text-corporate"><strong>ZipCreateCommand</strong></span> в блок <span class="text-neon"><strong>try-catch</strong></span> и отлавливай<br />
+исключение типа <strong><span class="text-corporate">PathIsNotFoundException</span></strong>. Если оно произошло, выведи сообщение &#171;<em>Вы неверно указали имя файла или директории.</em>&#187;<br />
+8. Запусти программу и проверь, что команда &#171;<em>упаковать файлы в архив</em>&#187; работает</p>
+
+<hr>
 <h3>Archiver (10)</h3>
 <p>Пришло время отрефакторить класс <strong><span class="text-corporate">ZipFileManager</span></strong>. В методе <mark>createZip</mark> есть код, который нам также понадобится в методах, которые будут добавлять или удалять файл в архив, распаковывать его и т.д. Эти методы мы будем реализовывать позже, но уже сейчас можем вынести общие части кода в отдельные методы.<br />
 Кроме того, метод <mark>createZip</mark> мог создавать архив только из одного файла, а хотелось бы уметь<br />
@@ -97,17 +117,5 @@
 4. Проинициализируй переменную <mark class="user">allKnownCommandsMap</mark> так, чтобы каждому значению из <span class="text-corporate"><strong>Operation</strong></span> соответствовала правильная команда.<br />
 5. Реализуй публичный статический метод <mark>execute(Operation <strong>operation</strong>) throws Exception</mark>, который должен брать нужную команду из <span class="text-red">allKnownCommandsMap</span> и вызывать у нее метод <mark>execute</mark>.<br />
 Догадался ты или нет, но ты только что реализовал паттерн Команда!</p>
-
-<hr>
-<h3>Archiver (5)</h3>
-<p><strong> Разделим команды на два типа</strong>: те, которые работают непосредственно с архивом и вспомогательные<br />
-(например <mark class="green">EXIT</mark>). Все команды первого типа, будут иметь общий функционал, его удобно вынести в какой-то их общий базовый класс. Назовем этот класс <span class="text-corporate"><strong>ZipCommand</strong></span>. Он, как и все классы команд, должен реализовывать интерфейс <strong><span class="text-yellow">Command</span></strong>. Все команды, которые работают с архивом, должны быть унаследованы от класса <span class="text-corporate"><strong>ZipCommand</strong></span>. Мы не будем создавать объекты класса <span class="text-corporate"><strong>ZipCommand</strong></span>, поэтому сделаем его абстрактным.</p>
-<p>1. Создай абстрактный класс <span class="text-corporate"><strong>ZipCommand</strong></span>, реализующий интерфейс <strong><span class="text-yellow">Command</span></strong><br />
-2. Создай по одному классу для каждой команды. Все перечисленные команды должны быть унаследованы от <strong><span class="text-corporate">ZipCommand</span></strong> и содержать пустую реализацию метода <mark>execute()</mark>, его реализацию мы будем писать для каждой команды отдельно по мере реализации нашего архиватора.<br />
-2.1. Команда создания архива (<em>упаковки файлов в архив</em>) – <strong><span class="text-corporate">class ZipCreateCommand</span></strong><br />
-2.2. Команда просмотра содержимого архива – <strong><span class="text-corporate">class ZipContentCommand</span></strong><br />
-2.3. Команда распаковки архива – <span class="text-corporate"><strong>class ZipExtractCommand</strong></span><br />
-2.4. Команда добавления файла в архив – <span class="text-corporate"><strong>class ZipAddCommand</strong></span><br />
-2.5. Команда удаления файла из архива – <strong><span class="text-corporate">class ZipRemoveCommand</span></strong></p>
 
 </div>
