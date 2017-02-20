@@ -1,4 +1,13 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big14">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big15">
+<h3>Archiver (15)</h3>
+<p>Пора попробовать что-нибудь распаковать. Для этого добавим публичный метод <mark>void extractAll(Path outputFolder) throws Exception</mark> в класс <span class="text-corporate"><strong>ZipFileManager</strong></span>. <span class="text-corporate"><strong>Path</strong> </span><mark class="user">outputFolder</mark> &#8212; это путь, куда мы будем распаковывать наш архив. У тебя уже большой опыт работы с элементами архива и потоками. Так что, я дам только подсказки по реализации этого метода, а тебе придется хорошенько подумать, как это все сделать:<br />
+1. Проверь, есть ли <strong>zip</strong> файл вообще<br />
+2. Если директория <span class="text-corporate"><strong>outputFolder</strong></span> не существует, то ее нужно создать, как и все папки, внутри которых она лежит.<br />
+3. Внутри архива некоторые файлы могут лежат внутри папок, тогда метод <mark>getName()</mark> элемента архива <span class="text-corporate"><strong>ZipEntry</strong></span>, вернет не совсем имя, как может показаться из названия, а относительный путь внутри архива. Этот относительный путь должен сохраниться и после распаковки, но уже относительно той директории, куда мы распаковали архив<br />
+4. Реализуй метод <mark>execute()</mark> класса <span class="text-corporate"><strong>ZipExtractCommand</strong></span>, по аналогии с таким же методом класса <span class="text-corporate"><strong>ZipCreateCommand</strong></span>, сделай такой же блок <span class="text-neon"><strong>try-catch</strong></span>, только поменяй сообщения выводимые пользователю, чтобы он понял, что сейчас мы будем распаковывать архив, и что нужно ввести полное имя архива и директорию, куда будем распаковывать. Не забудь вызвать метод <mark>extractAll</mark> класса <span class="text-corporate"><strong>ZipFileManager</strong></span>, а не <strong><span class="text-corporate">createZip</span></strong>, как это было в <mark>ZipCreateCommand</mark><br />
+5. Запускай программу и наслаждайся результатом распаковки</p>
+
+<hr>
 <h3>Archiver (14)</h3>
 <p>Все готово, чтобы реализовать метод <mark>execute()</mark> класса <span class="text-corporate"><strong>ZipContentCommand</strong></span>:<br />
 1. Выведи сообщение &#171;<strong><em>Просмотр содержимого архива.</em></strong>&#187;<br />
@@ -89,26 +98,5 @@
 5.3.2. Получи список файлов у файлового менеджера, сохраним его в переменную <span class="text-corporate"><strong>fileNames</strong></span><br />
 5.3.3. Для всех элементов <span class="text-corporate"><strong>fileNames</strong></span>, вызови метод <mark>addNewZipEntry(zipOutputStream, source, fileName)</mark><br />
 5.4. Если <span class="text-neon"><strong>source</strong></span> не является ни папкой, ни файлом, то кинь исключение <strong><span class="text-yellow">PathIsNotFoundException</span></strong>.</p>
-
-<hr>
-<h3>Archiver (9)</h3>
-<p>Теперь займемся другой, не менее важной частью нашего архиватора. Очень часто пользователь хочет<br />
-создать архив не из одного файла, а из целой папки. Тогда архивация сводится к поочередному<br />
-добавлению элемента <strong><span class="text-corporate">ZipEntry</span></strong> для каждого файла в архив.<br />
-Нам нужно написать класс <strong><span class="text-corporate">FileManager</span></strong> для получения списка всех файлов в какой-то папке. У него должен быть конструктор, который будет принимать путь <span class="text-corporate"><strong>Path</strong></span> <mark class="user">rootPath</mark>, указывающий на корень (<em>папку, файлы в которой нас интересуют</em>) и метод <mark>List&lt;Path&gt; getFileList()</mark>, который должен возвращать список относительных путей всех файлов, которые находятся по пути <mark class="user">rootPath</mark>, включая файлы в подпапках.<br />
-Директория, в которой будем искать, может задаваться только один раз в конструкторе. Поэтому, прямо в конструкторе мы сразу можем сформировать список файлов (их относительных путей), сохранив его в переменную класса <span class="text-corporate">List</span><span class="text-corporate">&lt;Path&gt;</span><strong><span class="text-corporate"> fileList</span></strong>.<br />
-Осталось только решить, как нам собрать все файлы, даже те, которые могут быть в папке, которая в папке, которая в папке, которая в интересующей нас папке. Фух, чуть не вошел рекурсию. Хотя нам-то она и поможет! Сделаем метод <mark>collectFileList(Path <strong>path</strong>)</mark>, который будет складывать в переменную класса fileList все файлы, обнаруженные внутри переданного пути path, вызывая сам себя для всех объектов, в обнаруженных директориях.</p>
-<p>1. Создай класс <span class="text-corporate"><strong>FileManager</strong></span> с конструктором <mark>FileManager(Path <strong>rootPath</strong>) throws IOException</mark><br />
-2. Объяви и проинициализируй приватные переменные класса:<br />
-2.1. <span class="text-corporate">Path <mark class="user">rootPath</mark></span> – корневой путь директории, файлы которой нас интересуют<br />
-2.2. <span class="text-red">List&lt;Path&gt; <strong>fileList</strong></span> – список относительных путей файлов внутри <mark class="user">rootPath</mark><br />
-3. Создай <strong>геттер</strong> для <mark class="user">fileList</mark><br />
-4. Реализуй метод <mark>void collectFileList(Path path) throws IOException</mark>, который должен:<br />
-4.1. Проверить, если переданный путь path является обычным файлом (<em>используй метод </em><mark>Files.isRegularFile</mark>), то получить его относительный путь относительно rootPath и добавить его в список <mark class="user">fileList</mark>.<br />
-4.2. Если переданный путь <mark class="user">path</mark>, является директорией (<em>узнать это поможет метод </em><mark>Files.isDirectory</mark>), то пройтись по всему содержимому директории и вызвать <mark>collectFileList(Path <strong>path</strong>)</mark>, передав в <mark class="user">path</mark> обнаруженные элементы.<br />
-Пройтись по всему содержимому директории можно предварительно получив <mark>DirectoryStream</mark> с помощью метода <mark>newDirectoryStream</mark> класса <span class="text-corporate"><strong>Files</strong></span>. Не забудь закрыть созданный <strong><span class="text-corporate">DirectoryStream</span></strong>.<br />
-5. Добавь вызов метода <mark>collectFileList(<strong>rootPath</strong>)</mark> в конструкторе <strong><span class="text-corporate">FileManager</span></strong>.<br />
-6. Примени все свои знания об инкапсуляции к этому классу.<br />
-Выполняя это задание, ты написал алгоритм, который обходит дерево файлов. Но в <strong>Java</strong> есть специальный интерфейс <strong><span class="text-yellow">FileVisitor</span></strong> для этих целей. Очень рекомендую разобраться как им пользоваться.</p>
 
 </div>
