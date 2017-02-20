@@ -1,4 +1,8 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big17">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big18">
+<h3>Archiver (18)</h3>
+<p>Ты <em><strong>отличный ученик,</strong></em> я немного подправил твой код, можешь использовать этот архиватор для архивации в повседневной жизни. Если будет время и желание, попробуй добавить операцию изменения степени сжатия архива!</p>
+
+<hr>
 <h3>Archiver (17)</h3>
 <p>Осталась ерунда. Добавить добавление файла в архив. Звучит подозрительно, но именно этим мы и<br />
 займемся. Добавление файлов похоже на удаление, мы создаем временный файл архив, переписываем в него все содержимое старого архива и добавляем новые файлы. Потом заменяем старый файл архива новым.<br />
@@ -75,24 +79,5 @@
 8. Создай объект класса <span class="text-corporate"><strong>FileProperties</strong></span>, используя полученные данные о файле.<br />
 9. Добавь созданный объект из <strong>п.8</strong> в список из <strong>п.3</strong><br />
 10. После выхода из цикла верни собранную информацию вызвавшему методу.</p>
-
-<hr>
-<h3>Archiver (12)</h3>
-<p>Сегодня мы подготовимся к реализации команды <mark>ZipContentCommand</mark>. Она будет заниматься получением содержимого архива. Содержимое архива – это упакованные файлы и папки, но нам было бы интересно узнать не только имена объектов архива, но и их размер до и после сжатия, степень сжатия и метод сжатия.<br />
-Создадим класс <strong><span class="text-corporate">FileProperties</span></strong>, который будет отвечать за свойства каждого файла в архиве. Свойства – это набор, состоящий из: имя файла, размер файла до и после сжатия, метод сжатия.<br />
-1. Создай класс <span class="text-corporate"><strong>FileProperties</strong></span><br />
-2. Добавь в него приватные переменные класса:<br />
-2.1. Имя <span class="text-corporate">String </span><mark class="user">name</mark><br />
-2.2. Размер в байтах <span class="text-corporate">long size</span><br />
-2.3. Размер после сжатия в байтах <span class="text-corporate">long compressedSize</span><br />
-2.4. Метод сжатия <mark>int compressionMethod</mark><br />
-3. Добавь гетеры для них<br />
-4. Добавь конструктор <mark>FileProperties(String <strong>name</strong>, long <strong>size</strong>, long <strong>compressedSize</strong>, int <strong>compressionMethod</strong>)</mark><br />
-5. Добавь метод <mark>long getCompressionRatio()</mark>, который будет считать степень сжатия по формуле: <span class="text-neon">100 &#8212; ((compressedSize * 100) / size)</span><br />
-6. Перегрузи метод <mark>String toString()</mark>, чтобы он возвращал строку по шаблону: “<strong><em>name size Kb</em></strong><br />
-<em><strong> (compressedSize Kb) сжатие:</strong> </em><strong><span class="text-user">compressionRatio%</span></strong>”, если размер <strong>size</strong> больше нуля, иначе он должен<br />
-вернуть только имя файла. Нулевой размер может быть, например, у директории. Не забудь<br />
-перевести байты в килобайты, а их не столько же, сколько граммов в килограмме, и даже не<br />
-столько, сколько блинов у меня на столе… Хм, похоже мне пора перекусить…</p>
 
 </div>
