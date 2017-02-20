@@ -1,4 +1,15 @@
-<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big13">
+<div class="wdghtml" taskKey="com.javarush.task.task31.task3110.big14">
+<h3>Archiver (14)</h3>
+<p>Все готово, чтобы реализовать метод <mark>execute()</mark> класса <span class="text-corporate"><strong>ZipContentCommand</strong></span>:<br />
+1. Выведи сообщение &#171;<strong><em>Просмотр содержимого архива.</em></strong>&#187;<br />
+2. Создай объект класса <span class="text-corporate"><strong>ZipFileManager</strong></span> с помощью метода <mark>getZipFileManager()</mark><br />
+3. Выведи сообщение &#171;<em><strong>Содержимое архива:</strong></em>&#187;<br />
+4. Получи список файлов архива с помощью метода <mark>getFilesList()</mark><br />
+5. Выведи свойства каждого файла в консоль. Тут нам и пригодится ранее реализованный метод <mark>toString()</mark> класса <span class="text-corporate"><strong>FileProperties</strong></span><br />
+6. Выведи сообщение &#171;<em><strong>Содержимое архива прочитано.</strong></em>&#187;<br />
+7. Запусти программу и проверь, что команда &#171;<em><strong>просмотреть содержимое архива</strong></em>&#187; работает</p>
+
+<hr>
 <h3>Archiver (13)</h3>
 <p>Продолжим наш путь к получению содержимого файла архива. Напишем метод <mark>getFilesList()</mark> в классе <span class="text-corporate"><strong>ZipFileManager</strong></span>. Он будет возвращать список файлов в архиве, вернее список свойств этих файлов (<em>класс свойств </em><strong><span class="text-corporate">FileProperties</span></strong><em> мы уже реализовали</em>).<br />
 <strong>Итак:</strong><br />
@@ -99,36 +110,5 @@
 5. Добавь вызов метода <mark>collectFileList(<strong>rootPath</strong>)</mark> в конструкторе <strong><span class="text-corporate">FileManager</span></strong>.<br />
 6. Примени все свои знания об инкапсуляции к этому классу.<br />
 Выполняя это задание, ты написал алгоритм, который обходит дерево файлов. Но в <strong>Java</strong> есть специальный интерфейс <strong><span class="text-yellow">FileVisitor</span></strong> для этих целей. Очень рекомендую разобраться как им пользоваться.</p>
-
-<hr>
-<h3>Archiver (8)</h3>
-<p>Чтобы узнать какую команду сейчас хочет выполнить пользователь, добавим метод <mark>Operation</mark><br />
-<mark> askOperation()</mark> в класс <strong><span class="text-corporate">Archiver</span></strong>. Этот метод должен вывести в консоль список доступных команд и<br />
-попросить выбрать одну из них. Для удобства будем просить ввести номер команды, где номер – это<br />
-порядковый номер команды в <span class="text-corporate">enum <strong>Operation</strong></span>. Получить порядковый номер значения в <span class="text-corporate">enum’е</span> можно с помощью метода <mark>ordinal()</mark>.<br />
-Теперь все готово чтобы переписать main, используя последние достижения науки и техники, а именно<br />
-класс <strong><span class="text-corporate">CommandExecutor</span></strong> и метод <mark>askOperation()</mark>.<br />
-1. Добавь публичный статический метод <mark>Operation askOperation() throws IOException в класс Archiver</mark>.<br />
-<strong>Он должен:</strong><br />
-1.1. Использовать методы класса <span class="text-corporate"><strong>ConsoleHelper</strong></span><br />
-1.2. Запрашивать у пользователя номер операции, которую он хочет совершить.</p>
-<p><strong>Подсказка:</strong><br />
-<em>чтобы вывести номер операции «Создать архив», используй: </em><mark>Operation.CREATE.ordinal()</mark></p>
-<p>1.3. Возвращать выбранную операцию.</p>
-<p><strong>Пример вывода метода askOperation():</strong><br />
-<code>Выберите операцию:<br />
-0 - упаковать файлы в архив<br />
-1 - добавить файл в архив<br />
-2 - удалить файл из архива<br />
-3 - распаковать архив<br />
-4 - просмотреть содержимое архива<br />
-5 – выход</code><br />
-2. Перепиши метод <mark>main()</mark>:<br />
-2.1. Объяви локальную переменную типа <mark class="user">Operation</mark><br />
-2.2. В цикле запрашивай новое значение для переменной <strong>п.2.1.</strong> с помощью метода <mark>askOperation()</mark> и вызывай выполнение операции с помощью <mark>CommandExecutor.execute()</mark><br />
-2.3. Обеспечь выход из цикла, если пользователь выбрал операцию <mark>Operation.EXIT</mark><br />
-2.4. Оберни вызов <mark>askOperation()</mark> и <mark>execute(operation)</mark> в блок <span class="text-neon"><strong>try-catch</strong></span>. Если произойдет исключение <strong><span class="text-yellow">WrongZipFileException</span></strong> выведи сообщение &#171;<em>Вы не выбрали файл архива или выбрали неверный файл.</em>&#187; с помощью <mark>ConsoleHelper</mark>, при любых других исключениях выводи &#171;<em>Произошла ошибка. Проверьте введенные данные.&#187;</em>.<br />
-2.5. Проследи, чтобы программа продолжила свою работу (<em>перешла на новый шаг цикла</em>), после обработки исключений.<br />
-3. Запусти программу и проверь, что команда “<em>выход</em>” работает.</p>
 
 </div>
