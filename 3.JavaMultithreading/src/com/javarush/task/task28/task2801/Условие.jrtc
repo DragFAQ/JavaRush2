@@ -1,0 +1,16 @@
+<div class="wdghtml" taskKey="com.javarush.task.task28.task2801">
+<h3>Осваиваем switch</h3>
+<p><strong> Реализуй логику метода</strong> <mark>switchTest</mark>:<br />
+1. Не используй условные операторы.<br />
+2. Используй <strong>1</strong> <mark>switch</mark>, у которого <strong>2</strong> <mark>case</mark> и <strong>1</strong> <mark>default</mark>.<br />
+3. <strong>Ожидаемый вывод:</strong><br />
+<code>Вывод для E1.A - "it's E1.A"<br />
+Вывод для E1.B - "it's E1.B"<br />
+Вывод для E1.C - "it's E1.C"<br />
+Вывод для E1.Y - "it's E1.Y"<br />
+Вывод для E2.D - "it's E2.D"<br />
+Вывод для E2.E - "it's E2.E"<br />
+Вывод для E2.F - "it's E2.F"</code><br />
+Вывод для всех других значений &#8212; &#171;<strong><em>undefined</em></strong>&#171;.</p>
+
+</div>
