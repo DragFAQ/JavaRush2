@@ -1,0 +1,9 @@
+<div class="wdghtml" taskKey="com.javarush.task.task28.task2806">
+<h3>Знакомство с Executors</h3>
+<p>1. В методе main создай фиксированный пул из <span class="text-user"><strong>5</strong></span> трэдов используя класс <span class="text-corporate"><strong>Executors</strong></span>.<br />
+2. В цикле отправь на исполнение в пул <span class="text-user"><strong>10</strong></span> задач <span class="text-corporate"><strong>Runnable</strong></span>.<br />
+3. У каждой задачи в методе <mark>run</mark> вызови метод <mark>doExpensiveOperation</mark> с порядковым номером задачи начиная с <span class="text-user"><strong>1</strong></span>, <strong>см. пример вывода</strong>.<br />
+4. Запрети добавление новых задач на исполнение в пул (<em>метод</em> <mark>shutdown</mark>).<br />
+5. Дай пулу <strong><span class="text-user">5</span> секунд</strong> на завершение всех задач (<em>метод</em> <mark>awaitTermination</mark> <em>и параметр</em> <mark class="user">TimeUnit.SECONDS</mark>).</p>
+
+</div>
