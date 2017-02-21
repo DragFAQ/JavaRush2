@@ -20,7 +20,9 @@ public class Solution {
             });
         }
 
-        executor.shutdownNow();
+        List<Runnable> list = executor.shutdownNow();
+        for (Runnable r : list)
+            System.out.println(r);
     }
 
     private static void doExpensiveOperation(int localId) {
