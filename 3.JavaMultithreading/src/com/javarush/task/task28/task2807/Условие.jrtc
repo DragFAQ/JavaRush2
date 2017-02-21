@@ -1,0 +1,16 @@
+<div class="wdghtml" taskKey="com.javarush.task.task28.task2807">
+<h3>Знакомство с ThreadPoolExecutor</h3>
+<p>1. В методе <mark>main</mark> создай очередь <span class="text-red">LinkedBlockingQueue&lt;Runnable&gt;</span>.<br />
+2. В цикле добавь в очередь <span class="text-user"><strong>10</strong> </span>задач <span class="text-corporate"><strong>Runnable</strong></span>.<br />
+3. У каждой задачи в методе <mark>run</mark> вызови метод <mark>doExpensiveOperation</mark> с порядковым номером задачи начиная с <span class="text-user"><strong>1</strong></span>, <strong>см. пример вывод</strong>а.<br />
+4. Создай объект <strong><span class="text-corporate">ThreadPoolExecutor</span></strong> со следующими параметрами:<br />
+&#8212; основное количество трэдов (<strong>ядро</strong>) = <span class="text-user"><strong>3</strong></span>,<br />
+&#8212; максимальное количество <strong>трэдов</strong> = <span class="text-user"><strong>5</strong></span>,<br />
+&#8212; время удержания трэда живым после завершения <strong>работы</strong> = <span class="text-user"><strong>1000</strong></span>,<br />
+&#8212; <strong>тайм-юнит</strong> &#8212; <strong>миллисекунды</strong>,<br />
+&#8212; созданная в <strong>п.1.</strong> <strong>очередь</strong> с задачами.<br />
+5. Запусти все трэды, которые входят в основное кол-во трэдов &#8212; ядро, используй метод <mark>prestartAllCoreThreads</mark>.<br />
+6. Запрети добавление новых задач на исполнение в пул (<em>метод</em> <mark>shutdown</mark>).<br />
+7. Дай объекту <strong><span class="text-corporate">ThreadPoolExecutor</span></strong> <strong><span class="text-user">5</span> секунд</strong> на завершение всех тасок (<em>метод</em> <mark>awaitTermination</mark> и <em>параметр</em> <mark class="user">TimeUnit.SECONDS</mark>).</p>
+
+</div>
