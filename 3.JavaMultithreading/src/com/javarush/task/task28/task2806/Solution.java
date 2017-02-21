@@ -10,7 +10,19 @@ import java.util.concurrent.TimeUnit;
 public class Solution {
     public static void main(String[] args) throws InterruptedException {
         //Add your code here
+        ExecutorService service = Executors.newFixedThreadPool(5);
+        for(int i = 1; i <= 10; i++) {
+            final int num = i;
+            service.submit(new Runnable() {
+                public void run()
+                {
+                    doExpensiveOperation(num);
+                }
+            });
+        }
 
+        service.shutdown();
+        service.awaitTermination(5, TimeUnit.SECONDS);
         /* output example
 pool-1-thread-2, localId=2
 pool-1-thread-1, localId=1
