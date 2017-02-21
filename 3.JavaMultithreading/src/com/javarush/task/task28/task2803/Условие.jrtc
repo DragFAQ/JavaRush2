@@ -1,0 +1,9 @@
+<div class="wdghtml" taskKey="com.javarush.task.task28.task2803">
+<h3>ThreadLocalRandom</h3>
+<p>Класс <span class="text-corporate"><strong>Solution</strong></span> будет использоваться трэдами.<br />
+Реализуй логику всех методов, используйте класс <span class="text-corporate"><strong>ThreadLocalRandom</strong></span>.<br />
+<mark>getRandomIntegerBetweenNumbers</mark> должен возвращать случайный <span class="text-corporate">int</span> между <strong>from</strong> и <strong>to</strong>.<br />
+<mark>getRandomDouble</mark> должен возвращать случайный <span class="text-corporate">double</span>.<br />
+<mark>getRandomLongBetween0AndN</mark> должен возвращать случайный <span class="text-corporate">long</span> между <strong>0</strong> и <strong>n</strong>.</p>
+
+</div>
