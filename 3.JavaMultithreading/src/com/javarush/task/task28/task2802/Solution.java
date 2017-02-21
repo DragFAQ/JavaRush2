@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 */
 public class Solution {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         class EmulateThreadFactoryTask implements Runnable {
             @Override
             public void run() {
@@ -24,6 +24,7 @@ public class Solution {
         Thread thread2 = new Thread(group2, new EmulateThreadFactoryTask());
 
         thread.start();
+        Thread.sleep(1000);
         thread2.start();
     }
 
@@ -38,5 +39,25 @@ public class Solution {
         factory.newThread(r).start();
         factory.newThread(r).start();
         factory.newThread(r).start();
+    }
+
+    public static class AmigoThreadFactory implements ThreadFactory {
+        private static AtomicInteger pool = new AtomicInteger(0);
+        private AtomicInteger thread = new AtomicInteger(0);
+
+        public AmigoThreadFactory() {
+            pool.incrementAndGet();
+        }
+
+        @Override
+        public Thread newThread(Runnable r) {
+            Thread result = new Thread(Thread.currentThread().getThreadGroup(), r);
+
+            result.setDaemon(false);
+            result.setPriority(5);
+            result.setName(Thread.currentThread().getThreadGroup().getName() + "-pool-" + pool + "-thread-" + thread.incrementAndGet());
+
+            return result;
+        }
     }
 }
