@@ -1,0 +1,8 @@
+<div class="wdghtml" taskKey="com.javarush.task.task28.task2805">
+<h3>Приоритеты в Threads</h3>
+<p>В отдельном файле создай класс <span class="text-corporate"><strong>MyThread</strong></span> унаследовавшись от <strong><span class="text-corporate">Thread</span></strong>. <span class="text-corporate"><strong>MyThread</strong></span> должен:<br />
+1. Иметь возможность быть созданным используя любой конструктор супер-класса (<span class="text-neon">Alt+Insert</span>).<br />
+2. Приоритет у трэдов должен проставляться циклично от минимального значения до максимального значения.<br />
+3. если у трэда установлена трэд-группа(<em>ThreadGroup</em>), то приоритет трэда не может быть больше максимального приоритета его трэд-группы.</p>
+
+</div>

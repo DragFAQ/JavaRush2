@@ -1,0 +1,10 @@
+<div class="wdghtml" taskKey="com.javarush.task.task28.task2804">
+<h3>Magic class</h3>
+<p>В пакете <em><strong>java.util.concurrent</strong></em> найди такую реализацию <strong><span class="text-corporate">List</span></strong>, у которой:<br />
+1. Итератор не содержит какие-либо данные, вставленные в список после создания итератора;<br />
+2. Внутри данные хранятся в виде массива;<br />
+3. Итератор гарантированно не бросает <strong><span class="text-neon">ConcurrentModificationException</span></strong>;<br />
+4. Допускаются все элементы включая <span class="text-neon"><strong>null</strong></span>;<br />
+5. Исправь строку <span class="text-red">List&lt;String&gt; <strong>list</strong> = null &#8230;</span> в методе <mark>main</mark>.</p>
+
+</div>
