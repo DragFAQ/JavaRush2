@@ -1,8 +1,11 @@
-<div class="wdghtml" taskKey="com.javarush.task.task27.task2707">
-<h3>Определяем порядок захвата монитора</h3>
-<p>Реализуй логику метода <mark>isNormalLockOrder</mark>, который должен определять:<br />
-соответствует ли порядок synchronized блоков в методе <mark>someMethodWithSynchronizedBlocks</mark> &#8212; порядку передаваемых в него аргументов.<br />
-В случае, если сначала происходит синхронизация по <strong><span class="text-neon">o1</span></strong>, а потом по <span class="text-neon"><strong>o2</strong></span>, метод должен вернуть <span class="text-neon"><strong>true</strong></span>.<br />
-Если наоборот &#8212; <span class="text-neon"><strong>false</strong></span>.</p>
+taskKey="com.javarush.task.task27.task2707"
 
-</div>
+Определяем порядок захвата монитора
+
+Реализуй логику метода isNormalLockOrder, который должен определять:
+соответствует ли порядок synchronized блоков в методе someMethodWithSynchronizedBlocks -
+порядку передаваемых в него аргументов.
+В случае, если сначала происходит синхронизация по o1, а потом по o2, метод должен вернуть true.
+Если наоборот - false.
+
+
