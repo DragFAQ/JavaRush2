@@ -14,7 +14,7 @@ public class Solution {
         FactorialCalculator task = new FactorialCalculator(n);
 
         System.out.println("Submitting Task ...");
-        Future future = threadpool.submit(task);
+        Future<Long> future = threadpool.submit(task);
         System.out.println("Task was submitted successfully");
 
         while (!future.isDone()) {
@@ -23,7 +23,14 @@ public class Solution {
         }
 
         System.out.println("Task is completed, let's check the result");
-        long factorial = (long) future.get();
+        long factorial = 0;
+        try {
+            factorial = (long) future.get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("Factorial of " + n + " is : " + factorial);
         threadpool.shutdown();
