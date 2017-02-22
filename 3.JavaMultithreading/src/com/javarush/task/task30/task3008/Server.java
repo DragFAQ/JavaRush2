@@ -31,7 +31,7 @@ public class Server {
                     socket.close();
                 }
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             serverSocket.close();
             ConsoleHelper.writeMessage(e.getMessage());
         }
@@ -45,29 +45,20 @@ public class Server {
         }
 
         private String serverHandshake(Connection connection) throws IOException, ClassNotFoundException {
-            String result = null;
-            boolean success = false;
-
-            while (!success) {
+            while (true) {
                 connection.send(new Message(MessageType.NAME_REQUEST));
                 Message response = connection.receive();
-                if (response.getType() == MessageType.USER_NAME) {
-                    result = connection.receive().getData();
-                    //result != null &&
-                        if (!result.equals("")) {
-                            if (!connectionMap.containsKey(result)) {
-                                connectionMap.put(result, connection);
 
-                                connection.send(new Message(MessageType.NAME_ACCEPTED));
+                if (response != null && response.getType() == MessageType.USER_NAME) {
+                    String name = response.getData();
+                    if (!name.isEmpty() && !connectionMap.containsKey(name)) {
+                        connectionMap.put(name, connection);
+                        connection.send(new Message(MessageType.NAME_ACCEPTED));
 
-                                success = true;
-                            }
-                        }
+                        return name;
                     }
                 }
-
-
-            return result;
+            }
         }
     }
 }
