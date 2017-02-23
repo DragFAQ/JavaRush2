@@ -1,6 +1,5 @@
 package com.javarush.task.task30.task3008.client;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
