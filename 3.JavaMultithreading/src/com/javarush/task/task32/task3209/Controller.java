@@ -27,5 +27,9 @@ public class Controller {
     public void init() {
 
     }
+
+    public HTMLDocument getDocument() {
+        return document;
+    }
 }
 
