@@ -65,6 +65,7 @@ public class Controller {
         HTMLEditorKit kit = new HTMLEditorKit();
         try {
             kit.write(writer, document, 0, document.getLength());
+            writer.close();
         } catch (Exception e) {
             ExceptionHandler.log(e);
         }
@@ -81,9 +82,39 @@ public class Controller {
     }
 
     public void openDocument() {
+        view.selectHtmlTab();
+        JFileChooser chooser = new JFileChooser();
+        chooser.setFileFilter(new HTMLFileFilter());
+        if (chooser.showOpenDialog(view) == JFileChooser.APPROVE_OPTION) {
+            currentFile = chooser.getSelectedFile();
+            resetDocument();
+            view.setTitle(currentFile.getName());
+            try {
+                FileReader reader = new FileReader(currentFile);
+                HTMLEditorKit kit = new HTMLEditorKit();
+                kit.read(reader, document, 0);
+                reader.close();
+            } catch (Exception e) {
+                ExceptionHandler.log(e);
+            }
+            view.resetUndo();
+        }
     }
 
     public void saveDocument() {
+        view.selectHtmlTab();
+        if (currentFile == null)
+            saveDocumentAs();
+        else {
+            try {
+                FileWriter writer = new FileWriter(currentFile);
+                HTMLEditorKit kit = new HTMLEditorKit();
+                kit.write(writer, document, 0, document.getLength());
+                writer.close();
+            } catch (Exception e) {
+                ExceptionHandler.log(e);
+            }
+        }
     }
 
     public void saveDocumentAs() {
