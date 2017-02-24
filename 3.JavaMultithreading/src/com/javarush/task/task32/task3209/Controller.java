@@ -2,13 +2,11 @@ package com.javarush.task.task32.task3209;
 
 import com.javarush.task.task32.task3209.listeners.UndoListener;
 
+import javax.swing.*;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
-import java.io.File;
-import java.io.IOException;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.*;
 
 public class Controller {
     private View view;
@@ -40,15 +38,15 @@ public class Controller {
     }
 
     public void resetDocument() {
+        UndoListener listener = view.getUndoListener();
         if (document != null) {
-            UndoListener listener = view.getUndoListener();
             document.removeUndoableEditListener(listener);
-
-            HTMLEditorKit kit = new HTMLEditorKit();
-            document = (HTMLDocument) kit.createDefaultDocument();
-            document.addUndoableEditListener(listener);
-            view.update();
         }
+
+        HTMLEditorKit kit = new HTMLEditorKit();
+        document = (HTMLDocument) kit.createDefaultDocument();
+        document.addUndoableEditListener(listener);
+        view.update();
     }
 
     public void setPlainText(String text) {
@@ -80,7 +78,6 @@ public class Controller {
         view.setTitle("HTML редактор");
         view.resetUndo();
         currentFile = null;
-
     }
 
     public void openDocument() {
@@ -90,7 +87,21 @@ public class Controller {
     }
 
     public void saveDocumentAs() {
-
+        view.selectHtmlTab();
+        JFileChooser chooser = new JFileChooser();
+        chooser.setFileFilter(new HTMLFileFilter());
+        if (chooser.showSaveDialog(view) == JFileChooser.APPROVE_OPTION) {
+            currentFile = chooser.getSelectedFile();
+            view.setTitle(currentFile.getName());
+            try {
+                FileWriter writer = new FileWriter(currentFile);
+                HTMLEditorKit kit = new HTMLEditorKit();
+                kit.write(writer, document, 0, document.getLength());
+                writer.close();
+            } catch (Exception e) {
+                ExceptionHandler.log(e);
+            }
+        }
     }
 }
 
