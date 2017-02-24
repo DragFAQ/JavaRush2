@@ -32,7 +32,7 @@ public class Controller {
     }
 
     public void init() {
-
+        createNewDocument();
     }
 
     public HTMLDocument getDocument() {
@@ -75,6 +75,12 @@ public class Controller {
     }
 
     public void createNewDocument() {
+        view.selectHtmlTab();
+        resetDocument();
+        view.setTitle("HTML редактор");
+        view.resetUndo();
+        currentFile = null;
+
     }
 
     public void openDocument() {
@@ -84,6 +90,7 @@ public class Controller {
     }
 
     public void saveDocumentAs() {
+
     }
 }
 
