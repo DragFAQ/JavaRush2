@@ -1,0 +1,11 @@
+taskKey="com.javarush.task.task29.task2903"
+
+И еще раз рефакторинг
+
+1. Исправить код в соответствии с Naming and Code Convention (Shift+F6 для рефакторинга)
+2. Просмотри методы класса ConcurrentMap.
+3. В строке "String previousEntry = null;" у concurrentMap вызови метод,
+который вставит пару (randomInt, text) только для ключа, которого нет в concurrentMap.
+(Вызванный метод должен возвращать предыдущее значение либо null для новой пары.)
+
+
