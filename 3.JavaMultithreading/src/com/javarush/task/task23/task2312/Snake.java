@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Snake {
-    private List<SnakeSection> sections;
+    private ArrayList<SnakeSection> sections;
     private boolean isAlive;
     private SnakeDirection direction;
 
-    public List<SnakeSection> getSections() {
+    public ArrayList<SnakeSection> getSections() {
         return sections;
     }
 
@@ -53,7 +53,7 @@ public class Snake {
 
     public void move(int hor, int vert) {}
 
-    private void checkBorders(SnakeSection head) {
+    public void checkBorders(SnakeSection head) {
         if (Room.game == null || head == null)
             isAlive = false;
         else if(head.getX() < 0 ||
@@ -63,7 +63,7 @@ public class Snake {
             isAlive = false;
     }
 
-    private void checkBody(SnakeSection head) {
+    public void checkBody(SnakeSection head) {
         if (head == null || sections == null)
             isAlive = false;
         else if (sections.contains(head))
