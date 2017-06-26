@@ -10,4 +10,9 @@ public class Tablet {
     public void createOrder() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Tablet" + number;
+    }
 }
