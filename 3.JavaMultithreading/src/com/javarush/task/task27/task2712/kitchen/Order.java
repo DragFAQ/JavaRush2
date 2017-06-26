@@ -5,6 +5,7 @@ import com.javarush.task.task27.task2712.Tablet;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Order {
     protected List<Dish> dishes;
@@ -17,14 +18,8 @@ public class Order {
 
     @Override
     public String toString() {
-        if (dishes.isEmpty())
-            return "";
-
-        String result = "Your order: ";
-        for (Dish dish : dishes)
-
         return dishes.isEmpty() ? "" : "Your order: " +
-                dishes. +
+                dishes.stream().map(Dish::toString).collect(Collectors.joining(",")).toString() +
                 " of " + tablet +
                 '}';
     }
