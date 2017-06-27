@@ -18,9 +18,8 @@ public class Order {
 
     @Override
     public String toString() {
-        return dishes.isEmpty() ? "" : "Your order: " +
-                dishes.stream().map(Dish::toString).collect(Collectors.joining(",")).toString() +
-                " of " + tablet +
-                '}';
+        return dishes.isEmpty() ? "" : "Your order: [" +
+                dishes.stream().map(Dish::toString).collect(Collectors.joining(", ")).toString() +
+                "] of " + tablet;
     }
 }

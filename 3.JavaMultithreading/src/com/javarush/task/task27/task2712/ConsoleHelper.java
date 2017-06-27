@@ -24,7 +24,7 @@ public class ConsoleHelper {
 
         String str;
         List<Dish> dishes = new ArrayList<>();
-        while ((str = readString()) != "exit") {
+        while (!(str = readString()).equals("exit")) {
             if (Dish.allDishesToString().contains(str))
                 dishes.add(Dish.valueOf(str));
             else
